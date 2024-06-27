@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://mydomain.org/mysite/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/design%20book/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/maxism/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/music%20theory/</loc>
+         <lastmod>2024-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
