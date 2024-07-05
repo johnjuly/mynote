@@ -1,4 +1,26 @@
-site_name: My site
-site_url: https://mydomain.org/mysite
+site_name: johnjuly的笔记本
+site_url: https://johnjuly.github.io/mynote/
+repo_name: johnjuly/mynote
+repo_url: https://github.com/johnjuly/mynote/
 theme:
-  name: material
+  name: 
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+  font: false
+  palette:
+    - scheme: default
+
+nav:
+  - Home:
+    - index.md
+  - Thinking:
+    - maxism.md
+  - Art:
+    - music theory.md
+    - design book.md
+
+  

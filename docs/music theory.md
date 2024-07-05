@@ -1,24 +1,57 @@
-***e*** very ***g*** ood ***b*** oy ***d*** oes ***f*** ine
-**f a c e**
-## 是什么
+# 是什么
+
 * 声音在时间流动的艺术
+
+> ***e*** very ***g*** ood ***b*** oy ***d*** oes ***f*** ine
+**f a c e**
+
 ## 三个部分
+
 * rhythm
 * melody
     时间关系中的音高移动
 * harmony
     音高的纵向安排
+
 ## 音乐记谱法：音高staff
-*  clef
-    * teble clef:记录童声和女声的音域；钢琴的上半部分音区
-        * 第二线上，钢琴键盘中部以上的G音；源自古代装饰体的写法，G，圈住
-    * bass clef:男生和钢琴的低音区；古代字母f
-    * c clef：器乐演奏
-* interval
+
+* clef(左边的谱号)
+*决定音符的实际音高*
+  * treble clef:记录童声和女声的音域；钢琴的上半部分音区
+    *第二线上，钢琴键盘中部以上的G音；源自古代装饰体的写法，G，圈住*
+  * bass clef:记录男生和钢琴的低音区；古代字母f标记钢琴键盘中部以下f音的位置
+  * c clef：器乐演奏
+* interval（音程）
 *任意两个音的距离*
-    * harmonic interval
+  * harmonic interval（和声）
     *同时弹奏*
-    * melodic interval
+  * melodic interval（旋律）
     *先后弹奏*
-    * octave
-    *相同字母标记的音*
+  * octave（八度）
+    *相同字母标记的音组成的音程*
+
+* 音域分组命名系统
+    中央C开始的八度为小字一组
+
+## 音高与键盘
+
+* 八度 半音 全音
+* 升号 降号 还原记号
+ “#”sharp “♭”flat Natural，♮ “𝄪”重升
+* 音阶scale
+*一个八度内按顺序排列的音符*
+* 半音阶chromatic sacle 上行+下行
+
+## 音乐记谱法：节奏rhythm
+
+> *音的运动与时间*
+
+* 拍子Meter
+* 音符和它们的时值
+ 1：2，二全→全 六十四分音符
+* 增加音符的时值
+  * 附点（dot） 1：3，写在间上
+  * 延音线(tie)
+  * 休止符
+  * 速度 
+   节拍器 1816 贝多芬的朋友maezel发明 M.M.❤️=60
