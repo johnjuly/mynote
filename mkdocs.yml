@@ -3,7 +3,7 @@ site_url: https://johnjuly.github.io/mynote/
 repo_name: johnjuly/mynote
 repo_url: https://github.com/johnjuly/mynote/
 theme:
-  name: 
+  name: material
   features:
     - content.code.annotate
     - navigation.tracking
