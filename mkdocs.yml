@@ -18,9 +18,9 @@ nav:
   - Home:
     - index.md
   - Thinking:
-    - maxism.md
+    -maxism: maxism.md
   - Art:
-    - music theory.md
-    - design book.md
+    - music theory: music theory.md
+    - design book: design book.md
 
   
