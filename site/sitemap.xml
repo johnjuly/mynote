@@ -1,23 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2024-06-27</lastmod>
+         <loc>https://johnjuly.github.io/mynote/</loc>
+         <lastmod>2025-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/design%20book/</loc>
-         <lastmod>2024-06-27</lastmod>
+         <loc>https://johnjuly.github.io/mynote/assembly%20language/</loc>
+         <lastmod>2025-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/maxism/</loc>
-         <lastmod>2024-06-27</lastmod>
+         <loc>https://johnjuly.github.io/mynote/chapter5%20algrebra/</loc>
+         <lastmod>2025-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/music%20theory/</loc>
-         <lastmod>2024-06-27</lastmod>
+         <loc>https://johnjuly.github.io/mynote/ds/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/examole/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/uncate/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/art/design%20book/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/art/music%20theory/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/cs/dsa/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/cs/net/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/cs/projectrecord/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/cs/verilog/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/math/discreate%20math/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/math/linear%20algebra%20exam/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/math/linear%20algebra/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/thinking/dy/</loc>
+         <lastmod>2025-01-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://johnjuly.github.io/mynote/thinking/maxism/</loc>
+         <lastmod>2025-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

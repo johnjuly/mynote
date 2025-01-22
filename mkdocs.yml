@@ -2,6 +2,7 @@ site_name: johnjuly的笔记本
 site_url: https://johnjuly.github.io/mynote/
 repo_name: johnjuly/mynote
 repo_url: https://github.com/johnjuly/mynote/
+edit_uri: edit/main/docs/
 theme:
   name: material
   features:
@@ -14,16 +15,24 @@ theme:
   palette:
     - scheme: default
 
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  
+
 nav:
   - Home:
     - index.md
   - Thinking:
-    - maxism: maxism.md
+    - maxism: thinking/maxism.md
+    - lit: thinking/dy.md
   - Art:
-    - music theory: music theory.md
-    - design book: design book.md
+    - music theory: art/music theory.md
+    - design book: art/design book.md
   - CS:
-    - net.md
+    - 网络: cs/net.md
+    - 数据结构与算法: cs/dsa.md
+    - verilog: cs/verilog.md
   - others:
     - examole.md
 
