@@ -80,3 +80,137 @@ ip:指令指针寄存器
 
 jmp 段地址：偏移地址
 只修改Ip jmp 合法寄存器
+
+## 第五章 [bx]和loop
+
+### 5.1 [bx]和内存单元的描述
+
+[bx]与[0]类似，[0]表示内存单元
+例子：
+mov ax,[0]
+将一个内存单元的内容送入ax这个内存单元的长度为2字节
+存放一个字，偏移地址为0.段地址在ds中
+要完整地描述一个内村单元需要两种信息：地址+长度（类型）
+段地址加偏移地址
+
+### 5.2 loop指令
+
+loop指令实现循环功能 cx存放循环次数
+
+```asm
+
+assume cs:code
+
+code segment
+  mov ax,2
+
+  mov cx,11
+s: add ax,ax
+  loop s
+  mov ax,4c00h
+  int 21h
+code ends
+end
+
+```
+
+```asm
+assume cs:codesg
+
+codesg segment
+
+           mov ax,0ffffh
+           mov ds,ax
+           mov bc,0         ;初始化ds:bx指向ffff:0
+
+           mov dx,0         ;初始化累加寄存器，（dx）=0
+
+           mov cx,12        ;初始化循环计数寄存器
+
+    s:     mov al,[bx]
+           mov ah,0         
+           add dx,ax        ;j间接向dx中加上((ds)*16+(bx))单元的数值
+           inc bx
+           loop s
+
+
+
+           mov ax,4c00h     ;程序返回
+           int 21h
+codesg ends
+
+end
+
+```
+
+### 5.8 段前缀的使用
+
+将内存ffff:0~ffff:b单元的数据复制到0：200~0：20b中
+
+复制过程用：初始化加循环
+
+```asm
+assume cs:code
+ code segment
+    mov bx,0      ；偏移地址从0开始
+    mov cx,12     ;(cx)=12.循环12次
+
+
+ s: mov ax,0ffffh
+    mov ds,ax     ;(ds)=0020h
+    mov[bx],dl    ;将dl的数据送入0020：bx
+    inc bx
+    loop s
+
+  mov  ax,4c00h
+  int 21h
+ code ends
+
+end
+
+```
+
+* 不足 原始单元和目标单元相距
+  大于64kb在不同的64kb段中，每次循环要设置两次ds 16位 64KB等于64 * 1024 = 65,536字节
+
+* 于是分别用两个寄存器分别存放原始单元和目标单元的段地址
+
+改进
+
+```asm
+assume cs:code
+
+code segment
+      mov ax,0ffffh
+      mov ds,ax         ;(ds)=0ffffh
+
+      mov ax,0020h
+      mov es,ax          ;(es)=0020h
+
+      mov bx,0           ;此时ds:bx指向 ffff:0.es:bx指向 0020：0
+
+      mov cx,12
+
+  s:  mov dl.[bx]
+      mov es:[bx],dl
+      inc bx
+      loop s
+
+      mov ax,4c00h
+      int 21h
+
+  code ends
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+```

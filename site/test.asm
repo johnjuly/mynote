@@ -1,27 +1,25 @@
-DATA SEGMENT
-    MESG DB "This is an Assembly Language Programe.", 0DH, 0AH, "$"
-    SPACE DB " ", "$"
-DATA ENDS
-CODE SEGMENT
-    ASSUME CS:CODE, DS:DATA
-    START:
-        MOV AX, DATA
-        MOV DS, AX              ; 将 DATA 段的段首址存入 DS
-        MOV BX, 01H             ; BX 初始值设为 1
-    AGAIN:
-        MOV DX, OFFSET MESG     ; 取欲显示的字符偏移量赋给 DX
-        MOV AH, 09H             ; 调用 9号(显示)DOS功能子程序
-        INT 21H
-        MOV CX, BX              ; 将 BX 的值赋给 CX
-        INC BX
-    NEXT:
-        MOV DX, OFFSET SPACE    ; 取空格字符偏移量赋给 DX
-        MOV AH, 09H
-        INT 21H
-        LOOP NEXT               ; 继续显示空格字符，直到 CX 为 0
-        CMP BX, 10              ; BX 与 10 比较
-         JBE AGAIN               ; 没显示 10 次，转移到 AGAIN 继续执行程序
-        MOV AH, 4CH
-        INT 21H                 ; 返回 DOS
-CODE ENDS
-END START
+assume cs:codesg
+
+codesg segment
+
+           mov ax,0ffffh
+           mov ds,ax
+           mov bc,0         ;初始化ds:bx指向ffff:0
+
+           mov dx,0         ;初始化累加寄存器，（dx）=0
+
+           mov cx,12        ;初始化循环计数寄存器
+
+    s:     mov al,[bx]
+           mov ah,0         
+           add dx,ax        ;j间接向dx中加上((ds)*16+(bx))单元的数值
+           inc bx
+           loop s
+
+
+
+           mov ax,4c00h     ;程序返回
+           int 21h
+codesg ends
+
+end

@@ -231,9 +231,6 @@ end
 
 endmodule
 ```
-![alt text](image-4.png)
-![alt text](image-5.png)
-
 
 * 时钟 每次移位
 * 

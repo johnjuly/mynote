@@ -3,8 +3,25 @@ site_url: https://johnjuly.github.io/mynote/
 repo_name: johnjuly/mynote
 repo_url: https://github.com/johnjuly/mynote/
 edit_uri: edit/main/docs/
+
+use_directory_urls: false    # 加上这句后才能显示用 html img 相对路径插入的图片
+
 theme:
   name: material
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
   features:
     - content.code.annotate
     - navigation.tracking
@@ -13,12 +30,37 @@ theme:
     - navigation.top
   font: false
   palette:
+   # Palette toggle for light mode
     - scheme: default
+      primary:
+       white
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary:
+       black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 markdown_extensions:
   - attr_list
   - md_in_html
-  
+  # for code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true #内容选项卡
 
 nav:
   - Home:
@@ -33,7 +75,23 @@ nav:
     - 网络: cs/net.md
     - 数据结构与算法: cs/dsa.md
     - verilog: cs/verilog.md
+    - 工具:
+      - cs/tools/git.md
+    - c++学习:
+      - hj:
+        - cs/c++ 1.md
+        - cs/c++ 2.md
+      - cs106l:
+        - cs/cs106l/iterators.md 
+        - cs/cs106l/streams.md 
+        - cs/cs106l/template classes.md 
+        - cs/cs106l/template functions.md 
+        - cs/cs106l/types and structs.md 
+        - cs/cs106l/classes.md 
+        - cs/cs106l/containers.md 
+        - cs/cs106l/initialization and references .md
   - others:
     - examole.md
+
 
   

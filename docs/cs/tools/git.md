@@ -107,5 +107,64 @@ git init
   * git checkout id,此后的修改不会出现在任何分支
   * 切换回master后会出现一条不属于任何分支的提交（相当于修改会丢失）
 
+* 如何解决： 在F位置上git checkout-b branch 创建并检出新分支
+
+#### 分支
+
+##### 创建
+
+* git branch name:基于当前head
+* git branch name id:基于id提交
+
+##### 查看
+
+* git branch(带-a显示远程分支)
+* git show-branch 更详细
+
+##### 切换分支
+
+* git checkout name
+* git checkout -b name:创建并切换
+
+##### 内容比较
+
+* git diff branch1 branch2
+* git diff branch 比较工作区和分支
+* git diff 比较工作区和暂存区
+
+##### 如何更方便地定位提交
+
+* 什么是分支名：和head一样也是一个指针（实际上叫ref引用）
+* 可以基于ref使用~或^定位父提交
+  * ~表示第一个父提交，~2表示第一个父提交的第一个父提交
+  * ^表示第一个父提交，^2表示第个二父提交
+![alt text](image.png)
+* 一个提交可能有多个父提交（merge commit）
 
 
+#### 合并
+
+* 将多个分支的更改都合并到当前分支：git merge branch1 branch2
+* 几种merge的情况：
+  * 当前分支只比被合并分支多提交：already up to date
+  * 被合并分支只比当前分支多提交：fast-forward(将head指向被合并分支)
+  * 都有新的提交：产生一个merge commit
+    * 有冲突时需要手动解决冲突（add commit merge commit)
+
+* merge操作一般都在github通过pr完成，两种特殊方式：
+  * squash merge:将目的分支多出的所有提交压缩为一个新提交并入当前分支
+  * rebase:命令行/github
+  ![alt text](image-1.png)
+
+### git进阶
+
+#### 修改提交历史
+
+1.git revert id
+2.修改最新提交的提交信息：git commit --amend
+3.回到之前某一提交的状态：git reset id
+几种模式：
+--soft：只修改 HEAD 指针，不修改暂存区和工作区
+--mixed：修改 HEAD 指针和暂存区，不修改工作区（默认）
+--hard：修改 HEAD 指针、暂存区和工作区（完全回退）
+![alt text](image-2.png)

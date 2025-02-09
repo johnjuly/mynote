@@ -74,7 +74,7 @@
 * 算术级数：与末项平方同阶
 * 幂方级数:比幂次方高1
 * 几何级数：与末项同阶,a>1
-![alt text](image.png)
+(![alt text](image.png))
 与上图做对比
 ![alt text](image-1.png)
 
