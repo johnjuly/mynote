@@ -1,0 +1,3162 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://johnjuly.github.io/mynote/cs/verilog.html">
+      
+      
+        <link rel="prev" href="dsa.html">
+      
+      
+        <link rel="next" href="tools/git.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>verilog - johnjuly的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25m13.274 9.537zl-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074M4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5M4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.5 4.5 0 0 1-.563-1.191 3.84 3.84 0 0 1-.05-2.063 4.65 4.65 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .75.75 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4 2.4 0 0 1-.507-.441 3.1 3.1 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19.01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.7 3.7 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.76 2.76 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6 6 0 0 0-.26.16 1 1 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1 1 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.61.61 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1 1 0 0 0-.34.398M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343za8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746m1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275M6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L6.94 8 4.97 6.03a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005 0-.009.004"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.5 3.5 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327q0 .15-.025.292c.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5q-.002.615-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A5 5 0 0 1 8 16a5 5 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5 5 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.7 1.7 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06m.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.17.17 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.75.75 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5m4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5m0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5M2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="johnjuly的笔记本" class="md-header__button md-logo" aria-label="johnjuly的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            johnjuly的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              verilog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/johnjuly/mynote/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    johnjuly/mynote
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../thinking/maxism.html" class="md-tabs__link">
+          
+  
+    
+  
+  Thinking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../art/music%20theory.html" class="md-tabs__link">
+          
+  
+    
+  
+  Art
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="net.html" class="md-tabs__link">
+          
+  
+    
+  
+  CS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examole.html" class="md-tabs__link">
+          
+  
+    
+  
+  others
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="johnjuly的笔记本" class="md-nav__button md-logo" aria-label="johnjuly的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    johnjuly的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/johnjuly/mynote/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    johnjuly/mynote
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Thinking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Thinking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thinking/maxism.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    maxism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thinking/dy.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Art
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Art
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../art/music%20theory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    music theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../art/design%20book.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    design book
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    CS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            CS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="net.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dsa.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构与算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    verilog
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="verilog.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    verilog
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      标识符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      变量类型 有包含关系
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1121" class="md-nav__link">
+    <span class="md-ellipsis">
+      1121
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1121">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hw" class="md-nav__link">
+    <span class="md-ellipsis">
+      hw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符与表达式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools/git.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    c++学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            c++学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_1" id="__nav_4_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    hj
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            hj
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c%2B%2B%201.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c%2B%2B%202.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++ 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_2" id="__nav_4_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    cs106l
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            cs106l
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/iterators.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iterators
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/streams.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Streams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/template%20classes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/template%20functions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/types%20and%20structs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types and structs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/classes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/containers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cs106l/initialization%20and%20references%20.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Initialization and references 
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    others
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examole.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examole
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      标识符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      变量类型 有包含关系
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1121" class="md-nav__link">
+    <span class="md-ellipsis">
+      1121
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1121">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hw" class="md-nav__link">
+    <span class="md-ellipsis">
+      hw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符与表达式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="c">类似c++</h1>
+<p>编程语言 不是用来编程序 用来接线……
+语言类 语法结构
+一门学好</p>
+<p>设计一个面包板 插元件
+大作业 打分 红绿灯  <strong>收获总结</strong>
+20个g……的vivado 单个Upan 4个g unless格式化
+ppt引导
+verilog 上下两行无先后顺序 类似做实验 无依赖
+行为 函数 结构 输入输出
+搭积木模块 ！递归 调用
+仿真虚拟输入信号
+节省生产成本
+赋值 接线操作 连线实现功能
+assignment 1  2选择器
+不允许超过一页！！
+做到Increment</p>
+<p>半加器全加器 8位 中括号 7：08位位宽bus</p>
+<h2 id="_1">逻辑功能</h2>
+<ul>
+<li>assign 连线 <em>通常描述组合逻辑</em></li>
+<li>用元件(类 类似c++语言)例化，可以用现有模块</li>
+<li>always 引导块语句{}时序语句</li>
+</ul>
+<div class="language-verilog highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">always</span><span class="p">@(</span><span class="err">敏感信号</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>begin与end之间需要顺序执行</strong></p>
+<h2 id="_2">标识符</h2>
+<ul>
+<li>在c++基础上可以加＄号</li>
+</ul>
+<h2 id="_3">变量类型 有包含关系</h2>
+<ul>
+<li>integer 无符号整数 用：做for循环控制变量</li>
+<li>parameter 常量类型 类似const 同时是参数</li>
+<li>reg (ister)暂存一个变量 穿的过程中可以存</li>
+<li>wire连线 不暂存信号 传的过程不存</li>
+</ul>
+<h2 id="_4">常量</h2>
+<p>x 任意1|0 z 高阻
+  负数 原反补码
+  interger
+  第一个想的应该是位宽bus
+  位宽指的是二进制数的位宽
+    只能用现有的常量定义新的常量</p>
+<div class="language-text highlight"><pre><span></span><code>引脚约束
+artix 7
+fbg676
+-2
+testbanch不加端口
+输入reg
+输出wire
+#5 每隔5个单位取反
+</code></pre></div>
+<p><em>3 5 素数隔离开</em>
+   8为加法器
+   方法：每隔一段时间+1；always #5 tempa=random(32bit)%9 构造8位随机数</p>
+<p>module fulladder(
+input a,input b,input ci,
+output sum ,output co</p>
+<div class="language-text highlight"><pre><span></span><code>);
+wire t1,t2,t3;
+halfadder h1(a,b,t1,t2);
+halfadder h2(t1,ci,sum,t3);
+assign co=t2^t3;
+</code></pre></div>
+<p>endmodule</p>
+<p>module halfadder(
+    input a,
+    input b,
+    output sum,
+    output carry
+   );
+    assign carry=a &amp; b;
+    assign  sum=a ^ b;
+endmodule</p>
+<p>module tb1();</p>
+<p>reg tempa,tempb;
+wire tsum,tc;
+halfadder myha(tempa.tempb,tsum,tc);
+initial begin
+    tempa=1'b0;
+    tempb=1'b0;
+end
+always #5 tempa=~tempa;
+always #3 tempb=~tempb;
+endmodule
+module halfadder(input a,
+input b,output sum,output carry
+);
+assign carry=a&b;
+assign sum=a^b;
+endmodule</p>
+<p>module tb2( );
+reg tempa,tempb,tempc;
+wire tsum,tc;
+fulladder myha(tempa,tempb,tempc,tsum,tc);
+initial begin
+    tempa=1'b0;
+    tempb=1'b0;
+    tempc=1'b0;
+ end
+ always #5 tempa=~tempa;
+ always #3 tempb=~tempb;
+ always #7 tempc=~tempc;
+endmodule
+module fulladder8(
+    input [7:0] a,
+    input [7:0] b,
+    input ci,
+    output [7:0] sum,
+    output [7:0] co
+);</p>
+<div class="language-text highlight"><pre><span></span><code>wire [7:0] internal_co;  // 内部进位信号
+
+// 实例化8个全加器
+genvar i;
+generate
+    for (i = 0; i &lt; 8; i = i + 1) begin : fa_inst
+        fulladder fa (
+            .a(a[i]),
+            .b(b[i]),
+            .ci(i == 0 ? ci : internal_co[i-1]),
+            .sum(sum[i]),
+            .co(internal_co[i])
+        );
+    end
+endgenerate
+
+// 最高位的进位输出
+assign co[7] = internal_co[7];
+assign co[6:0] = internal_co[6:0];
+</code></pre></div>
+<h2 id="1121">1121</h2>
+<h3 id="hw">hw</h3>
+<ul>
+<li>波形截图当前时刻描述功能验证</li>
+<li>代码注释</li>
+<li>模块图 手绘解释 模块</li>
+</ul>
+<h3 id="_5">运算符与表达式</h3>
+<ul>
+<li>类比c++</li>
+<li>等式运算 <strong>缩减运算</strong>与c++唯一不一样</li>
+<li>取最低8位 % 8位加法器随机数生成</li>
+<li>不定x 所以红色</li>
+<li>真假值只是1bit与c++不一样</li>
+<li>括号的使用 优先级的体现</li>
+<li>位运算 与逻辑运算不一样 同或？操作数位宽一样，不一样右端对齐位数少高位补齐高位反码和补码为1</li>
+<li>关系运算符1位</li>
+<li><em>等式运算</em>
+  *全等与等于的区别</li>
+<li><strong>缩减运算符</strong></li>
+<li>单目运算符 与位运算的区别</li>
+<li>判断一个数是否为全1 or0 或01</li>
+<li>2的倍数-1？</li>
+<li>移位相当于*2或/2，乘法运算 用以为来做  ×3 移1位+原来的？</li>
+</ul>
+<div class="language-v highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">//16bitfulladder</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">mudule</span><span class="w"> </span><span class="n">adder16</span><span class="p">(</span><span class="k">input</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">input</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">input</span><span class="w"> </span><span class="n">cin</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">output</span><span class="w"> </span><span class="n">cout</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">output</span><span class="w"> </span><span class="n">sum</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">);</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">assign</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="p">,</span><span class="n">sum</span><span class="p">}</span><span class="o">=</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="o">+</span><span class="n">cin</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">//tb</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="err">五端口</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kt">reg</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="kt">reg</span><span class="w"> </span><span class="n">cin</span><span class="p">;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="kt">wire</span><span class="p">[</span><span class="mh">15</span><span class="p">]</span><span class="w"> </span><span class="n">tsum</span><span class="p">;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kt">wire</span><span class="w"> </span><span class="n">cout</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">adder16</span><span class="w"> </span><span class="n">my</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,);</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">initial</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="n">a</span><span class="o">=</span><span class="mh">16</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="n">b</span><span class="o">=</span><span class="mh">16</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="n">cin</span><span class="o">=</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="k">end</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">always</span><span class="w"> </span><span class="p">#</span><span class="mh">3</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="nb">$random</span><span class="o">%</span><span class="w"> </span><span class="mh">17</span><span class="p">&#39;</span><span class="n">b</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="k">endmodule</span>
+</span></code></pre></div>
+<div class="language-v highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">module</span><span class="w"> </span><span class="n">simpleoperation</span><span class="p">(</span><span class="k">input</span><span class="w"> </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">ina</span><span class="p">,</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">input</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">inb</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">output</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="n">sumab</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">output</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="n">leftshiftA</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">output</span><span class="w"> </span><span class="n">lessflag</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">output</span><span class="w"> </span><span class="n">equalflag</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">output</span><span class="w"> </span><span class="n">bitXorflag</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="p">{</span><span class="n">sumflag</span><span class="p">,</span><span class="n">sumab</span><span class="p">}</span><span class="o">=</span><span class="n">ina</span><span class="o">+</span><span class="n">inb</span><span class="p">;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">leftshiftA</span><span class="o">=</span><span class="n">ina</span><span class="o">&lt;&lt;</span><span class="n">inb</span><span class="p">;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">lessflag</span><span class="w"> </span><span class="o">=</span><span class="p">(</span><span class="n">ina</span><span class="o">&lt;</span><span class="n">inb</span><span class="p">)</span><span class="o">?</span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="o">:</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">equalflag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ina</span><span class="o">==</span><span class="n">inb</span><span class="p">)</span><span class="o">?</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="o">:</span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="k">assign</span><span class="w"> </span><span class="n">bitXorflag</span><span class="o">=^</span><span class="n">ina</span><span class="p">;</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">endmodule</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="k">module</span><span class="w"> </span><span class="n">tb</span><span class="p">();</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="kt">reg</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">ina</span><span class="p">,</span><span class="n">inb</span><span class="p">;</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="n">sumab</span><span class="p">,</span><span class="n">leftshiftA</span><span class="p">;</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="kt">wire</span><span class="w"> </span><span class="n">lessflag</span><span class="p">,</span><span class="n">equalflag</span><span class="p">,</span><span class="n">bitXorflag</span><span class="p">;</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">simpleoperation</span><span class="w"> </span><span class="n">myunit</span><span class="p">(</span><span class="n">ina</span><span class="p">,</span><span class="n">inb</span><span class="p">,</span><span class="n">sumab</span><span class="p">,</span><span class="n">leftshiftA</span><span class="p">,</span><span class="n">lessflag</span><span class="p">,</span><span class="n">equalflag</span><span class="p">,</span><span class="n">bitXorflag</span><span class="p">);</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="k">initial</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="n">ina</span><span class="o">=</span><span class="mh">8</span><span class="mi">&#39;d0</span><span class="p">;</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="n">inb</span><span class="o">=</span><span class="mh">8</span><span class="mi">&#39;d0</span><span class="p">;</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="k">end</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">#</span><span class="mh">3</span><span class="w"> </span><span class="n">ina</span><span class="o">=</span><span class="nb">$random</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mh">9</span><span class="mb">&#39;b100</span><span class="n">_000_000</span><span class="p">;</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">  </span><span class="k">always</span><span class="w"> </span><span class="p">#</span><span class="mh">5</span><span class="w"> </span><span class="n">inb</span><span class="o">=</span><span class="nb">$random</span><span class="w"> </span><span class="o">%</span><span class="mh">8</span><span class="mb">&#39;b00</span><span class="n">_000_100</span><span class="w">  </span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="k">endmodule</span>
+</span></code></pre></div>
+<ul>
+<li>时钟 每次移位</li>
+<li></li>
+</ul>
+<p>module counttimes(
+    input wire [31:0] input_data,  // 32位输入数据
+    output reg [4:0] zero_count,   // 0的计数，最多为32，所以需要5位
+    output reg [4:0] one_count     // 1的计数，最多为32，所以需要5位
+);
+integer i;</p>
+<p>// 用于计数的always块
+always @(*) begin
+    // 初始化计数器
+    zero_count = 5'b0;
+    one_count = 5'b0;</p>
+<div class="language-text highlight"><pre><span></span><code>// 定义循环变量
+
+// 遍历32位输入数据
+for ( i = 0; i &lt; 32; i = i + 1) begin
+    if (input_data[i] == 1&#39;b0) begin
+        zero_count = zero_count + 5&#39;b00001;
+    end else if (input_data[i] == 1&#39;b1) begin
+        one_count = zero_count + 5&#39;b00001;
+    end
+end
+</code></pre></div>
+<p>end</p>
+<p>endmodule
+module testbench();</p>
+<div class="language-text highlight"><pre><span></span><code>// Signal declarations
+             // Clock sig
+reg [31:0] data_in;     // 32-bit input data
+wire [4:0] out_0;     // Output count of 0s
+wire [4:0] out_1;     // Output count of 1s
+
+initial begin
+    data_in=$random%33&#39;h100_000_000; 
+end
+</code></pre></div>
+<p>endmodule
+ module testbench;
+    reg [31:0] input_data;
+    wire [4:0] zero_count;
+    wire [4:0] one_count;</p>
+<div class="language-text highlight"><pre><span></span><code>counttimes uut (
+    .input_data(input_data),
+    .zero_count(zero_count),
+    .one_count(one_count)
+);
+
+initial begin
+    input_data = 32&#39;b10101010_10101010_10101010_10101010;  // 示例输入
+    #10;  // 等待10个时间单位，确保计数完成
+    $display(&quot;0的计数: %d, 1的计数: %d&quot;, zero_count, one_count);
+end
+
+always #5 input_data = ~input_data;  // 每5个时间单位翻转输入数据
+</code></pre></div>
+<p>endmodule
+always块语句，实现一个十分频器，divider10( input clk_in,input reset,
+ output count, output clk_out)。
+ 其功能可以理解为将时钟降频为原来的10分之一（
+ 思路：对clk_in进行count计数，count取值0~9，count数到5时，clk_out由1变0，
+ count数到10时自动归零同时clk_out由0变1）</p>
+<p><div class="language-verilog highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">module</span><span class="w"> </span><span class="n">divider10</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="kt">wire</span><span class="w"> </span><span class="n">clk_in</span><span class="p">,</span><span class="w">  </span><span class="c1">// 输入时钟</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="kt">wire</span><span class="w"> </span><span class="n">reset</span><span class="p">,</span><span class="w">   </span><span class="c1">// 复位信号</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">reg</span><span class="w"> </span><span class="n">clk_out</span><span class="w">  </span><span class="c1">// 输出时钟</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w">  </span><span class="c1">// 4位计数器</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk_in</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">posedge</span><span class="w"> </span><span class="n">reset</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">reset</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mh">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 复位计数器</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="n">clk_out</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mh">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 复位输出时钟</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">9</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">                </span><span class="n">count</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mh">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 计数器达到9后重置</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">                </span><span class="n">clk_out</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="o">~</span><span class="n">clk_out</span><span class="p">;</span><span class="w">  </span><span class="c1">// 翻转输出时钟</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">            </span><span class="k">end</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">                </span><span class="n">count</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 计数器加1</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">            </span><span class="k">end</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="k">end</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="k">endmodule</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">tb</span><span class="p">;</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="c1">// 定义输入和输出信号</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="n">clk_in</span><span class="p">;</span><span class="w">         </span><span class="c1">// 输入时钟</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="n">reset</span><span class="p">;</span><span class="w">          </span><span class="c1">// 复位信号</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="n">clk_out</span><span class="p">;</span><span class="w">       </span><span class="c1">// 输出时钟</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">    </span><span class="c1">// 实例化被测模块（DUT）</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="n">divider10</span><span class="w"> </span><span class="n">uut</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">        </span><span class="p">.</span><span class="n">clk_in</span><span class="p">(</span><span class="n">clk_in</span><span class="p">),</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">        </span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="n">reset</span><span class="p">),</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">        </span><span class="p">.</span><span class="n">clk_out</span><span class="p">(</span><span class="n">clk_out</span><span class="p">)</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">    </span><span class="c1">// 初始块：设置初始条件并启动仿真</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">    </span><span class="k">initial</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">        </span><span class="c1">// 初始化信号</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">        </span><span class="n">clk_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0</span><span class="p">;</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">        </span><span class="n">reset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">1</span><span class="p">;</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">        </span><span class="c1">// 等待一段时间后释放复位信号</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">        </span><span class="p">#</span><span class="mh">10</span><span class="w"> </span><span class="n">reset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0</span><span class="p">;</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">        </span><span class="c1">// 运行仿真一段时间</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span><span class="p">#</span><span class="mh">500</span><span class="w"> </span><span class="nb">$finish</span><span class="p">;</span><span class="w">  </span><span class="c1">// 仿真运行500个时间单位后结束</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">    </span><span class="c1">// 生成时钟信号</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">    </span><span class="k">always</span><span class="w"> </span><span class="p">#</span><span class="mh">5</span><span class="w"> </span><span class="n">clk_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">clk_in</span><span class="p">;</span><span class="w">  </span><span class="c1">// 每5个时间单位翻转一次时钟信号</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">    </span><span class="c1">// 监控信号变化</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="k">endmodule</span>
+</span></code></pre></div>
+w
+写模块 接线
+类型变量的位宽一定要写。赋值时一定要保证位宽一致。32不写32，任意一个变量都要注意位宽</p>
+<p>12.5
+核心 语句</p>
+<ul>
+<li>
+<p>条件语句 两种
+    特点 判断真假再操作，块语句内部（begin end）aleays 语句内initial 也可 一般不用
+    位宽明确要求
+    改成读秒器 分频成1秒一个周期</p>
+<p>逻辑的封闭性大类和小类分清楚
+case语句没有break
+铭感表达式的值可能出现x或z
+一定要覆盖所有情况。其余放在default
+代码 1111 优先级</p>
+<p>if一定要对应一个else 逻辑封闭性
+两位位宽四种情况，保证位宽所有的值都要有对应的情况
+* 循环 同样也有先后顺序
+always块语句内部
+巧妙 sum[2] sum&gt;4 同计数器
+熟悉 例二 乘法做累加 a左移 *2
+迭代乘法
+aleays语句内部有触发器<img alt="alt text" src="7f6708816a8129cea1949cc51419a63.jpg" /></p>
+</li>
+</ul>
+<p><div class="language-verilog highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">module</span><span class="w"> </span><span class="n">multiple_32</span><span class="p">(</span><span class="n">outcome</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">parameter</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="mh">32</span><span class="p">;</span><span class="w">  </span><span class="c1">//位宽</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">output</span><span class="p">[</span><span class="mh">2</span><span class="o">*</span><span class="n">size</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">outcome</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">input</span><span class="p">[</span><span class="n">size</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">2</span><span class="o">*</span><span class="n">size</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">outcome</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">integer</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="c1">//循环变量</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">always</span><span class="p">@(</span><span class="n">a</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">begin</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">outcome</span><span class="o">=</span><span class="mh">64&#39;h0000</span><span class="p">;</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mh">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">size</span><span class="p">;</span><span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mh">1</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="n">outcome</span><span class="o">=</span><span class="n">outcome</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">);</span><span class="c1">//迭代乘法</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="k">end</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="k">endmodule</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="k">module</span><span class="w"> </span><span class="n">tb</span><span class="p">();</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="c1">// 定义参数</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="k">parameter</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">32</span><span class="p">;</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="c1">// 声明信号</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="n">size</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="kt">wire</span><span class="w"> </span><span class="p">[</span><span class="mh">2</span><span class="o">*</span><span class="n">size</span><span class="o">-</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">outcome</span><span class="p">;</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="c1">// 实例化被测模块</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="n">multiple_32</span><span class="w"> </span><span class="n">test</span><span class="p">(.</span><span class="n">outcome</span><span class="p">(</span><span class="n">outcome</span><span class="p">),</span><span class="w"> </span><span class="p">.</span><span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="w"> </span><span class="p">.</span><span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="c1">// 初始化</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">    </span><span class="k">initial</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">32</span><span class="mi">&#39;d0</span><span class="p">;</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">32</span><span class="mi">&#39;d0</span><span class="p">;</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">        </span><span class="p">#</span><span class="mh">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等待一段时间以观察初始状态</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="c1">// 生成随机输入</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">   </span><span class="k">always</span><span class="w"> </span><span class="p">#</span><span class="mh">32</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="nb">$random</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mh">33&#39;h100</span><span class="p">;</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">      </span><span class="k">always</span><span class="w"> </span><span class="p">#</span><span class="mh">32</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="nb">$random</span><span class="w"> </span><span class="o">%</span><span class="mh">33&#39;h100</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">    </span><span class="c1">// 监控输出</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">    </span><span class="k">initial</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">        </span><span class="nb">$monitor</span><span class="p">(</span><span class="s">&quot;At time %t, a = %d, b = %d, outcome = %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">$time</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">outcome</span><span class="p">);</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">    </span><span class="c1">// 结束仿真</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">    </span><span class="k">initial</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">        </span><span class="p">#</span><span class="mh">1000</span><span class="w"> </span><span class="nb">$finish</span><span class="p">;</span><span class="w"> </span><span class="c1">// 仿真运行1000个时间单位后结束</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="k">endmodule</span>
+</span></code></pre></div>
+module Counter(
+    input clk,                // 时钟信号
+    input rst_n,              // 复位信号（低有效）
+    input inc,                // 增加计数的信号（按键或拨码开关）
+    output reg [5:0] count,   // 计数器值（6位）
+    output reg overflow       // 溢出信号
+);</p>
+<div class="language-text highlight"><pre><span></span><code>always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        count &lt;= 6&#39;d0;      // 复位时计数器清零
+        overflow &lt;= 0;      // 清除溢出信号
+    end else if (inc) begin
+        if (count == 59) begin
+            count &lt;= 6&#39;d0;  // 溢出后计数器归零
+            overflow &lt;= 1;  // 设置溢出信号
+        end else begin
+            count &lt;= count + 1; // 计数器加1
+            overflow &lt;= 0;      // 清除溢出信号
+        end
+    end
+end
+</code></pre></div>
+<p>endmodule
+module SevenSegment(
+    input [5:0] count,    // 计数器值（6位）
+    output reg [6:0] seg1, // 个位数码管显示
+    output reg [6:0] seg2  // 十位数码管显示
+);</p>
+<div class="language-text highlight"><pre><span></span><code>// 数码管显示编码（七段显示编码，共阴极数码管）
+reg [6:0] seg_map [0:9];
+
+initial begin
+    // 数码管段的编码（共阴数码管）
+    seg_map[0] = 7&#39;b0111111; // 0
+    seg_map[1] = 7&#39;b0000110; // 1
+    seg_map[2] = 7&#39;b1011011; // 2
+    seg_map[3] = 7&#39;b1001111; // 3
+    seg_map[4] = 7&#39;b1100110; // 4
+    seg_map[5] = 7&#39;b1101101; // 5
+    seg_map[6] = 7&#39;b1111101; // 6
+    seg_map[7] = 7&#39;b0000111; // 7
+    seg_map[8] = 7&#39;b1111111; // 8
+    seg_map[9] = 7&#39;b1101111; // 9
+end
+
+always @(count) begin
+    seg1 = seg_map[count % 10];  // 个位显示
+    seg2 = seg_map[count / 10];  // 十位显示
+end
+</code></pre></div>
+<p>endmodule
+module OverflowIndicator(
+    input overflow,          // 溢出信号
+    output reg led_overflow // 溢出指示灯
+);</p>
+<div class="language-text highlight"><pre><span></span><code>always @(overflow) begin
+    if (overflow) begin
+        led_overflow &lt;= 1; // 溢出时LED亮
+    end else begin
+        led_overflow &lt;= 0; // 无溢出时LED熄灭
+    end
+end
+</code></pre></div>
+<p>endmodule
+module TopModule(
+    input clk,              // 时钟信号
+    input rst_n,            // 复位信号（低有效）
+    input inc,              // 增加计数的信号（拨码开关或按键）
+    output [6:0] seg1,      // 第一位数码管的段选择信号
+    output [6:0] seg2,      // 第二位数码管的段选择信号
+    output led_overflow     // 溢出指示灯
+);</p>
+<div class="language-text highlight"><pre><span></span><code>// 内部信号定义
+wire [5:0] count;
+wire overflow;
+
+// 实例化计数器模块
+Counter counter_inst (
+    .clk(clk),
+    .rst_n(rst_n),
+    .inc(inc),
+    .count(count),
+    .overflow(overflow)
+);
+
+// 实例化数码管显示模块
+SevenSegment seven_segment_inst (
+    .count(count),
+    .seg1(seg1),
+    .seg2(seg2)
+);
+
+// 实例化溢出指示模块
+OverflowIndicator overflow_inst (
+    .overflow(overflow),
+    .led_overflow(led_overflow)
+);
+</code></pre></div>
+<p>endmodule
+`timescale 1ns / 1ps</p>
+<p>module TopModule_tb;</p>
+<div class="language-text highlight"><pre><span></span><code>// 测试信号声明
+reg clk;               // 时钟信号
+reg rst_n;             // 复位信号（低有效）
+reg inc;               // 增加计数的信号（拨码开关或按键）
+wire [6:0] seg1;       // 第一位数码管的段选择信号
+wire [6:0] seg2;       // 第二位数码管的段选择信号
+wire led_overflow;     // 溢出指示灯
+
+// 实例化顶层模块
+TopModule uut (
+    .clk(clk),
+    .rst_n(rst_n),
+    .inc(inc),
+    .seg1(seg1),
+    .seg2(seg2),
+    .led_overflow(led_overflow)
+);
+
+// 时钟生成
+always begin
+    #5 clk = ~clk; // 每5ns翻转一次时钟，频率为100MHz
+end
+
+// 测试过程
+initial begin
+    // 初始化信号
+    clk = 0;
+    rst_n = 0;
+    inc = 0;
+
+    // 复位测试
+    $display(&quot;==== 复位测试 ====&quot;);
+    rst_n = 0;  // 激活复位
+    #10;
+    rst_n = 1;  // 解除复位
+    #10;
+
+    // 模拟按下增计数按钮
+    $display(&quot;==== 增计数测试 ====&quot;);
+    inc = 1;
+    #10;  // 计数器增加1
+    inc = 0;
+    #10;
+    inc = 1;
+    #10;  // 计数器再次增加1
+    inc = 0;
+    #10;
+
+    // 达到59时溢出测试
+    $display(&quot;==== 溢出测试 ====&quot;);
+    // 将计数器设置为59
+    repeat(59) begin
+        inc = 1;
+        #10;
+        inc = 0;
+        #10;
+    end
+
+    // 模拟溢出后，检查led_overflow是否点亮
+    inc = 1;
+    #10;  // 应该回到0并激活溢出LED
+    inc = 0;
+    #10;
+
+    // 再次增计数，测试正常计数过程
+    $display(&quot;==== 再次增计数 ====&quot;);
+    inc = 1;
+    #10;
+    inc = 0;
+    #10;
+
+    // 完成测试
+    $finish;
+end
+
+// 打印波形
+initial begin
+    $dumpfile(&quot;TopModule_tb.vcd&quot;); // VCD文件用于波形查看
+    $dumpvars(0, TopModule_tb);    // 指定dump的信号
+end
+</code></pre></div>
+<p>endmodule
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2024/12/20 20:02:27
+// Design Name: 
+// Module Name: counters
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 数码管计数器设计，包含分频、计数、数码管显示与溢出指示功能
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+// 分频器模块
+module ClockDivider(
+    input clk_in,           // 全局时钟输入（100 MHz）
+    input rst_n,            // 复位信号（低有效）
+    output reg clk_out      // 分频后的时钟输出
+);</p>
+<div class="language-text highlight"><pre><span></span><code>reg [26:0] cnt;         // 分频计数器（适合1 Hz分频）
+localparam DIV_VAL = 27&#39;d100_000_000; // 分频系数，100 MHz 除以 2 得到 1 Hz
+
+always @(posedge clk_in or negedge rst_n) begin
+    if (!rst_n) begin
+        cnt &lt;= 27&#39;d0;
+        clk_out &lt;= 0;
+    end else if (cnt == DIV_VAL - 27&#39;d1) begin
+        cnt &lt;= 27&#39;d0;
+        clk_out &lt;= ~clk_out; // 翻转输出时钟
+    end else begin
+        cnt &lt;= cnt +27&#39;d1;
+    end
+end
+</code></pre></div>
+<p>endmodule</p>
+<p>// 计数器模块
+module Counter(
+    input clk,                // 时钟信号
+    input rst_n,              // 复位信号（低有效）
+    input inc,                // 增加计数的信号（按键或拨码开关）
+    output reg [5:0] count,   // 计数器值（6位）
+    output reg overflow       // 溢出信号
+);</p>
+<div class="language-text highlight"><pre><span></span><code>always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        count &lt;= 6&#39;d0;      // 复位时计数器清零
+        overflow &lt;= 0;      // 清除溢出信号
+    end else if (inc) begin
+        if (count == 59) begin
+            count &lt;= 6&#39;d0;  // 溢出后计数器归零
+            overflow &lt;= 1;  // 设置溢出信号
+        end else begin
+            count &lt;= count + 6&#39;d1; // 计数器加1
+            overflow &lt;= 0;      // 清除溢出信号
+        end
+    end
+end
+</code></pre></div>
+<p>endmodule</p>
+<p>// 数码管显示模块
+module SevenSegment(
+    input [5:0] count,    // 计数器值（6位）
+    output reg [6:0] seg1, // 个位数码管显示
+    output reg [6:0] seg2  // 十位数码管显示
+);</p>
+<div class="language-text highlight"><pre><span></span><code>// 数码管显示编码（七段显示编码，共阴极数码管）
+reg [6:0] seg_map [0:9];
+
+initial begin
+    // 数码管段的编码（共阴数码管）
+    seg_map[0] = 7&#39;b0111111; // 0
+    seg_map[1] = 7&#39;b0000110; // 1
+    seg_map[2] = 7&#39;b1011011; // 2
+    seg_map[3] = 7&#39;b1001111; // 3
+    seg_map[4] = 7&#39;b1100110; // 4
+    seg_map[5] = 7&#39;b1101101; // 5
+    seg_map[6] = 7&#39;b1111101; // 6
+    seg_map[7] = 7&#39;b0000111; // 7
+    seg_map[8] = 7&#39;b1111111; // 8
+    seg_map[9] = 7&#39;b1101111; // 9
+end
+
+always @(count) begin
+    seg1 = seg_map[count % 10];  // 个位显示
+    seg2 = seg_map[count / 10];  // 十位显示
+end
+</code></pre></div>
+<p>endmodule</p>
+<p>// 溢出指示模块
+module OverflowIndicator(
+    input overflow,          // 溢出信号
+    output reg led_overflow // 溢出指示灯
+);</p>
+<div class="language-text highlight"><pre><span></span><code>always @(overflow) begin
+    if (overflow) begin
+        led_overflow &lt;= 1; // 溢出时LED亮
+    end else begin
+        led_overflow &lt;= 0; // 无溢出时LED熄灭
+    end
+end
+</code></pre></div>
+<p>endmodule
+module counters(
+    input clk,              // 全局时钟输入（100 MHz）
+    input rst_n,            // 全局复位信号（低有效）
+    input inc,              // 增加计数的信号（拨码开关或按键）
+    output [6:0] seg,       // 数码管段选择信号
+    output [7:0] digit_sel, // 数码管位选择信号
+    output led_overflow     // 溢出指示灯
+);</p>
+<div class="language-text highlight"><pre><span></span><code>// 分频后的时钟信号
+wire clk_1Hz;
+wire scan_clk;
+
+// 分频器实例化（1 Hz 时钟）
+ClockDivider clk_div_inst (
+    .clk_in(clk),        // 输入 100 MHz 时钟
+    .rst_n(rst_n),       // 复位信号
+    .clk_out(clk_1Hz)    // 输出 1 Hz 时钟
+);
+
+// 动态扫描分频器（生成扫描时钟）
+reg [15:0] scan_counter;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n)
+        scan_counter &lt;= 16&#39;d0;
+    else
+        scan_counter &lt;= scan_counter + 1;
+end
+assign scan_clk = scan_counter[15]; // 扫描时钟
+
+// 内部信号定义
+wire [5:0] count;
+wire overflow;
+reg [1:0] digit_select;
+reg [7:0] digit_sel_reg;
+reg [6:0] seg_reg;
+
+// 计数器模块实例化
+Counter counter_inst (
+    .clk(clk_1Hz),       // 使用分频后的 1 Hz 时钟
+    .rst_n(rst_n),       // 复位信号
+    .inc(inc),           // 增加计数信号
+    .count(count),       // 输出计数值
+    .overflow(overflow)  // 输出溢出信号
+);
+
+// 动态扫描的位选逻辑（只激活两位）
+always @(posedge scan_clk or negedge rst_n) begin
+    if (!rst_n)
+        digit_select &lt;= 2&#39;b00;
+    else
+        digit_select &lt;= digit_select + 1;
+end
+
+always @(*) begin
+    case (digit_select)
+        2&#39;b00: digit_sel_reg = 8&#39;b00000001; // 激活第一个数码管（个位）
+        2&#39;b01: digit_sel_reg = 8&#39;b00000010; // 激活第二个数码管（十位）
+        default: digit_sel_reg = 8&#39;b00000000; // 未激活
+    endcase
+end
+assign digit_sel = digit_sel_reg;
+
+// 动态扫描段选信号生成
+always @(*) begin
+    case (digit_select)
+        2&#39;b00: seg_reg = seg_map[count % 10];       // 个位数
+        2&#39;b01: seg_reg = seg_map[(count / 10) % 10]; // 十位数
+        default: seg_reg = 7&#39;b0000000;               // 默认熄灭
+    endcase
+end
+assign seg = seg_reg;
+
+// 溢出指示灯模块实例化
+OverflowIndicator overflow_inst (
+    .overflow(overflow), // 输入溢出信号
+    .led_overflow(led_overflow) // 输出溢出指示灯
+);
+
+// 数码管段选映射
+reg [6:0] seg_map [0:9];
+initial begin
+    seg_map[0] = 7&#39;b0111111; // 0
+    seg_map[1] = 7&#39;b0000110; // 1
+    seg_map[2] = 7&#39;b1011011; // 2
+    seg_map[3] = 7&#39;b1001111; // 3
+    seg_map[4] = 7&#39;b1100110; // 4
+    seg_map[5] = 7&#39;b1101101; // 5
+    seg_map[6] = 7&#39;b1111101; // 6
+    seg_map[7] = 7&#39;b0000111; // 7
+    seg_map[8] = 7&#39;b1111111; // 8
+    seg_map[9] = 7&#39;b1101111; // 9
+end
+</code></pre></div>
+<p>endmodule</p>
+<p>`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2024/12/23 00:35:15
+// Design Name: 
+// Module Name: sm_ip
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+//数码管 ip 核
+module smg_ip_model(clk,data,sm_wei,sm_duan); 
+input clk;
+input [15:0] data;
+output [3:0] sm_wei;
+output [7:0] sm_duan;
+//----------------------------------------------------------
+//分频
+integer clk_cnt; 
+reg clk_400Hz;
+always @(posedge clk) 
+if(clk_cnt==32'd100000)
+begin clk_cnt &lt;= 1'b0; clk_400Hz &lt;= ~clk_400Hz;end 
+else
+clk_cnt &lt;= clk_cnt + 1'b1;
+//----------------------------------------------------------
+//位控制
+reg [3:0]wei_ctrl=4'b1110; 
+always @(posedge clk_400Hz)
+wei_ctrl &lt;= {wei_ctrl[2:0],wei_ctrl[3]};
+//段控制
+reg [3:0]duan_ctrl; 
+always @(wei_ctrl) 
+case(wei_ctrl)
+4'b1110:duan_ctrl=data[3:0]; 
+4'b1101:duan_ctrl=data[7:4]; 
+4'b1011:duan_ctrl=data[11:8];
+4'b0111:duan_ctrl=data[15:12]; 
+default:duan_ctrl=4'hf; 
+endcase
+//----------------------------------------------------------
+//解码模块
+reg [7:0]duan;
+always @(duan_ctrl) 
+case(duan_ctrl) 
+4'h0:duan=8'b0011_1111;//0
+4'h1:duan=8'b0000_0110;//1
+4'h2:duan=8'b0101_1011;//2
+4'h3:duan=8'b0100_1111;//3
+4'h4:duan=8'b0110_0110;//4
+4'h5:duan=8'b0110_1101;//5
+4'h6:duan=8'b0111_1101;//6
+4'h7:duan=8'b0000_0111;//7
+4'h8:duan=8'b0111_1111;//8
+4'h9:duan=8'b0110_1111;//9 
+4'ha:duan=8'b0111_0111;//a 
+4'hb:duan=8'b0111_1100;//b 
+4'hc:duan=8'b0011_1001;//c 
+4'hd:duan=8'b0101_1110;//d 
+4'he:duan=8'b0111_1000;//e 
+4'hf:duan=8'b0111_0001;//f
+// 4'hf:duan=8'b1111_1111;//不显示
+default : duan = 8'b0011_1111;//0 
+endcase
+//----------------------------------------------------------
+assign sm_wei =~wei_ctrl; 
+assign sm_duan = duan; 
+endmodule</p>
+<p>//测试数码管 ip 
+module test(clk,data); 
+input clk;
+output [15:0]data;
+//----------------------------------------------------------
+//分频 1Hz 
+reg clk_1Hz;
+integer clk_1Hz_cnt; 
+always @(posedge clk)
+if(clk_1Hz_cnt==32'd25000000-1)
+begin clk_1Hz_cnt &lt;= 1'b0; clk_1Hz &lt;= ~clk_1Hz;end 
+else
+clk_1Hz_cnt &lt;= clk_1Hz_cnt + 1'b1;
+//----------------------------------------------------------
+//循环显示 0-9
+reg [39:0]disp=40'h1234567890;
+reg [15:0]data;
+always @(posedge clk_1Hz) 
+begin
+disp &lt;= {disp[35:0],disp[39:36]}; 
+data &lt;= disp[39:24];
+end 
+endmodule</p>
+<p>//顶层模块</p>
+<p>module smg_ip(
+    input clk,              // 全局时钟输入
+    input rst_n,            // 复位信号（低有效）
+    input inc,              // 增加计数的按键信号
+    output [3:0] sm_wei,    // 数码管位选
+    output [7:0] sm_duan,   // 数码管段选
+    output led_overflow     // 溢出指示灯
+);</p>
+<div class="language-text highlight"><pre><span></span><code>// 内部信号定义
+reg [5:0] count;        // 计数器值（0-59）
+reg overflow;           // 溢出信号
+wire inc_edge;          // 按键上升沿检测信号
+wire [15:0] display_data; // 数码管显示数据
+
+// 分频模块（1 Hz时钟生成）
+reg [25:0] clk_div_cnt;
+reg clk_1Hz_reg;
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        clk_div_cnt &lt;= 26&#39;d0;
+        clk_1Hz_reg &lt;= 1&#39;b0;
+    end else if (clk_div_cnt == 26&#39;d50_000_000 - 1) begin
+        clk_div_cnt &lt;= 26&#39;d0;
+        clk_1Hz_reg &lt;= ~clk_1Hz_reg;
+    end else begin
+        clk_div_cnt &lt;= clk_div_cnt + 1;
+    end
+end
+wire clk_1Hz = clk_1Hz_reg;
+
+// 按键去抖与上升沿检测
+reg inc_reg1, inc_reg2;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        inc_reg1 &lt;= 1&#39;b0;
+        inc_reg2 &lt;= 1&#39;b0;
+    end else begin
+        inc_reg1 &lt;= inc;
+        inc_reg2 &lt;= inc_reg1;
+    end
+end
+assign inc_edge = inc_reg1 &amp; ~inc_reg2; // 检测 inc 的上升沿
+
+// 计数器逻辑
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        count &lt;= 6&#39;d0;
+        overflow &lt;= 1&#39;b0;
+    end else if (inc_edge) begin
+        if (count == 6&#39;d59) begin
+            count &lt;= 6&#39;d0;
+            overflow &lt;= 1&#39;b1; // 溢出时指示灯点亮
+        end else begin
+            count &lt;= count + 1;
+            overflow &lt;= 1&#39;b0; // 清除溢出信号
+        end
+    end
+end
+
+// 数码管显示数据生成
+assign display_data = {4&#39;h0, count / 10, 4&#39;h0, count % 10};
+
+// 数码管驱动实例化
+smg_ip_model smg_driver (
+    .clk(clk),
+    .data(display_data),
+    .sm_wei(sm_wei),
+    .sm_duan(sm_duan)
+);
+
+// 溢出指示灯
+assign led_overflow = overflow;
+</code></pre></div>
+<p>endmodule</p>
+<div class="language-v highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">module</span><span class="w"> </span><span class="n">test</span><span class="p">(</span><span class="n">clk</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">out_LED3_NS</span><span class="p">,</span><span class="n">out_LED3_WE</span><span class="p">);</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">input</span><span class="w"> </span><span class="n">clk</span><span class="p">;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">output</span><span class="w"> </span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="n">data</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">output</span><span class="w"> </span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">out_LED3_NS</span><span class="p">,</span><span class="n">out_LED3_WE</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">//分频 1Hz </span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kt">reg</span><span class="w"> </span><span class="n">clk_1Hz</span><span class="p">;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">integer</span><span class="w"> </span><span class="n">clk_1Hz_cnt</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">if</span><span class="p">(</span><span class="n">clk_1Hz_cnt</span><span class="o">==</span><span class="mh">32</span><span class="mi">&#39;d25000000</span><span class="o">-</span><span class="mh">1</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">begin</span><span class="w"> </span><span class="n">clk_1Hz_cnt</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b0</span><span class="p">;</span><span class="w"> </span><span class="n">clk_1Hz</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="o">~</span><span class="n">clk_1Hz</span><span class="p">;</span><span class="k">end</span><span class="w"> </span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">else</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">clk_1Hz_cnt</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">clk_1Hz_cnt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">1</span><span class="mb">&#39;b1</span><span class="p">;</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1">//----------------------------------------------------------</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="c1">//循环显示 0-9</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="kt">reg</span><span class="w"> </span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="n">data</span><span class="p">;</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="kt">reg</span><span class="p">[</span><span class="mh">2</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">out_LED3_NS</span><span class="p">,</span><span class="n">out_LED3_WE</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="kt">reg</span><span class="p">[</span><span class="mh">3</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">Time_10</span><span class="o">=</span><span class="mh">2</span><span class="mi">&#39;d2</span><span class="p">,</span><span class="n">Time_1</span><span class="o">=</span><span class="mh">2</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="kt">reg</span><span class="p">[</span><span class="mh">1</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="w"> </span><span class="n">Stage</span><span class="o">=</span><span class="mh">2</span><span class="mb">&#39;b00</span><span class="p">;</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk_1Hz</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="k">begin</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="k">case</span><span class="p">(</span><span class="n">Stage</span><span class="p">)</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="mh">2</span><span class="mb">&#39;b00</span><span class="o">:</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="k">begin</span><span class="c1">//NS pass</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="k">if</span><span class="p">((</span><span class="n">Time_10</span><span class="o">==</span><span class="mh">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">Time_1</span><span class="o">==</span><span class="mh">0</span><span class="p">))</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="n">Stage</span><span class="o">&lt;=</span><span class="mh">2</span><span class="mb">&#39;b11</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="n">Time_10</span><span class="o">&lt;=</span><span class="mh">4</span><span class="mi">&#39;d1</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="n">Time_1</span><span class="w"> </span><span class="o">&lt;=</span><span class="mh">4</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="k">end</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="k">else</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="k">begin</span><span class="w"> </span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="k">if</span><span class="p">(</span><span class="n">Time_1</span><span class="o">==</span><span class="mh">0</span><span class="p">)</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="k">begin</span><span class="w"> </span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="n">Time_1</span><span class="o">&lt;=</span><span class="mh">4</span><span class="mi">&#39;d9</span><span class="p">;</span>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="n">Time_10</span><span class="o">&lt;=</span><span class="n">Time_10</span><span class="o">-</span><span class="mh">1</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="k">end</span>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="k">else</span>
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="k">end</span>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="k">begin</span><span class="w"> </span>
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="n">Time_1</span><span class="o">&lt;=</span><span class="n">Time_1</span><span class="o">-</span><span class="mh">1</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="k">end</span>
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="n">data</span><span class="p">[</span><span class="mh">15</span><span class="o">:</span><span class="mh">8</span><span class="p">]</span><span class="o">&lt;=</span><span class="p">{</span><span class="n">Time_10</span><span class="p">,</span><span class="n">Time_1</span><span class="p">};</span><span class="w"> </span>
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="n">data</span><span class="p">[</span><span class="mh">7</span><span class="o">:</span><span class="mh">0</span><span class="p">]</span><span class="o">&lt;=</span><span class="p">{</span><span class="n">Time_10</span><span class="p">,</span><span class="n">Time_1</span><span class="p">};</span><span class="w"> </span>
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a><span class="n">out_LED3_NS</span><span class="o">&lt;=</span><span class="mh">3</span><span class="mb">&#39;b001</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="n">out_LED3_WE</span><span class="o">&lt;=</span><span class="mh">3</span><span class="mb">&#39;b100</span><span class="p">;</span>
+</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="k">end</span><span class="w"> </span>
+</span><span id="__span-5-46"><a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="mh">2</span><span class="mb">&#39;b01</span><span class="o">:</span>
+</span><span id="__span-5-47"><a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="k">begin</span><span class="c1">//WE pass</span>
+</span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="k">if</span><span class="p">((</span><span class="n">Time_10</span><span class="o">==</span><span class="mh">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">Time_1</span><span class="o">==</span><span class="mh">0</span><span class="p">))</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="n">Stage</span><span class="o">&lt;=</span><span class="mh">2</span><span class="mb">&#39;b10</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="n">Time_10</span><span class="o">&lt;=</span><span class="mh">4</span><span class="mi">&#39;d1</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a><span class="n">Time_1</span><span class="w"> </span><span class="o">&lt;=</span><span class="mh">4</span><span class="mi">&#39;d0</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="k">end</span>
+</span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="n">els</span>
+</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a><span class="n">e</span><span class="w"> </span><span class="k">begin</span><span class="w"> </span>
+</span><span id="__span-5-55"><a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a><span class="k">else</span>
+</span><span id="__span-5-56"><a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a><span class="k">end</span>
+</span><span id="__span-5-57"><a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a><span class="n">Time_1</span><span class="o">&lt;=</span><span class="mh">4</span><span class="mi">&#39;d9</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-58"><a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a><span class="n">Time_10</span><span class="o">&lt;=</span><span class="n">Time_10</span><span class="o">-</span><span class="mh">1</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-59"><a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a><span class="k">end</span>
+</span><span id="__span-5-60"><a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a><span class="k">begin</span><span class="w"> </span>
+</span><span id="__span-5-61"><a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a><span class="n">Time_1</span><span class="o">&lt;=</span><span class="n">Time_1</span><span class="o">-</span><span class="mh">1</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-5-62"><a id="__codelineno-5-62" name="__codelineno-5-62" href="#__codelineno-5-62"></a><span class="k">end</span>
+</span></code></pre></div>
+<p>module smg_dynamic_display(
+    input clk,             // 100MHz 时钟输入
+    input rst_n,           // 复位信号（低有效）
+    input inc,             // 按键：计数+1
+    output [3:0] sm_wei,   // 数码管位选
+    output [7:0] sm_duan,  // 数码管段选
+    output led_overflow    // 溢出指示灯
+);</p>
+<div class="language-text highlight"><pre><span></span><code>// 内部信号定义
+reg [5:0] count;        // 计数值（范围：0-59）
+reg overflow;           // 溢出信号
+wire inc_edge;          // 按键上升沿检测信号
+
+// 动态扫描相关
+wire clk_400Hz;         // 动态扫描时钟
+reg [1:0] scan_index;   // 当前扫描的位索引（0-3）
+reg [3:0] wei_ctrl;     // 位选信号寄存器
+reg [3:0] current_digit; // 当前扫描的数字
+reg [7:0] duan_ctrl;    // 段选信号寄存器
+
+// ==================== 1. 分频器：生成 400Hz 时钟 ====================
+reg [16:0] clk_div_cnt; // 分频计数器
+reg clk_400Hz_reg;      // 400Hz 时钟寄存器
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        clk_div_cnt &lt;= 17&#39;d0;
+        clk_400Hz_reg &lt;= 1&#39;b0;
+    end else if (clk_div_cnt == 17&#39;d125_000 - 1) begin
+        clk_div_cnt &lt;= 17&#39;d0;
+        clk_400Hz_reg &lt;= ~clk_400Hz_reg;
+    end else begin
+        clk_div_cnt &lt;= clk_div_cnt + 1;
+    end
+end
+assign clk_400Hz = clk_400Hz_reg;
+
+// ==================== 2. 按键上升沿检测 ====================
+reg inc_reg1, inc_reg2;
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        inc_reg1 &lt;= 1&#39;b0;
+        inc_reg2 &lt;= 1&#39;b0;
+    end else begin
+        inc_reg1 &lt;= inc;
+        inc_reg2 &lt;= inc_reg1;
+    end
+end
+assign inc_edge = inc_reg1 &amp; ~inc_reg2;
+
+// ==================== 3. 计数器逻辑 ====================
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        count &lt;= 6&#39;d0;
+        overflow &lt;= 1&#39;b0;
+    end else if (inc_edge) begin
+        if (count == 6&#39;d59) begin
+            count &lt;= 6&#39;d0;
+            overflow &lt;= 1&#39;b1; // 溢出时点亮指示灯
+        end else begin
+            count &lt;= count + 1;
+            overflow &lt;= 1&#39;b0; // 清除溢出信号
+        end
+    end
+end
+
+// ==================== 4. 动态扫描逻辑 ====================
+// 扫描位选信号
+always @(posedge clk_400Hz or negedge rst_n) begin
+    if (!rst_n) begin
+        scan_index &lt;= 2&#39;d0;
+    end else begin
+        scan_index &lt;= scan_index + 1;
+    end
+end
+
+// 位选信号生成
+always @(*) begin
+    case (scan_index)
+        2&#39;d0: wei_ctrl = 4&#39;b1110; // 第一位亮
+        2&#39;d1: wei_ctrl = 4&#39;b1101; // 第二位亮
+        2&#39;d2: wei_ctrl = 4&#39;b1011; // 第三位亮
+        2&#39;d3: wei_ctrl = 4&#39;b0111; // 第四位亮
+        default: wei_ctrl = 4&#39;b1111;
+    endcase
+end
+
+// 段选信号生成
+always @(*) begin
+    case (scan_index)
+        2&#39;d0: current_digit = count % 10;     // 个位
+        2&#39;d1: current_digit = count / 10;     // 十位
+        default: current_digit = 4&#39;d15;       // 空位
+    endcase
+
+    case (current_digit)
+        4&#39;d0: duan_ctrl = 8&#39;b0011_1111; // 数字0
+        4&#39;d1: duan_ctrl = 8&#39;b0000_0110; // 数字1
+        4&#39;d2: duan_ctrl = 8&#39;b0101_1011; // 数字2
+        4&#39;d3: duan_ctrl = 8&#39;b0100_1111; // 数字3
+        4&#39;d4: duan_ctrl = 8&#39;b0110_0110; // 数字4
+        4&#39;d5: duan_ctrl = 8&#39;b0110_1101; // 数字5
+        4&#39;d6: duan_ctrl = 8&#39;b0111_1101; // 数字6
+        4&#39;d7: duan_ctrl = 8&#39;b0000_0111; // 数字7
+        4&#39;d8: duan_ctrl = 8&#39;b0111_1111; // 数字8
+        4&#39;d9: duan_ctrl = 8&#39;b0110_1111; // 数字9
+        default: duan_ctrl = 8&#39;b0000_0000; // 不显示
+    endcase
+end
+
+// ==================== 5. 输出信号分配 ====================
+assign sm_wei = wei_ctrl;
+assign sm_duan = duan_ctrl;
+assign led_overflow = overflow;
+</code></pre></div>
+<p>endmodule</p>
+<p>`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2024/12/30 22:47:50
+// Design Name: 
+// Module Name: test
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+//数码管 ip 核
+module smg_ip_model(clk,data,sm_wei,sm_duan); 
+input clk;
+input [15:0] data;
+output [3:0] sm_wei;
+output [7:0] sm_duan;
+//----------------------------------------------------------
+//分频
+integer clk_cnt; 
+reg clk_400Hz;
+always @(posedge clk) 
+if(clk_cnt==32'd100000)
+begin clk_cnt &lt;= 1'b0; clk_400Hz &lt;= ~clk_400Hz;end 
+else
+clk_cnt &lt;= clk_cnt + 1'b1;
+//----------------------------------------------------------
+//位控制
+reg [3:0]wei_ctrl=4'b1110; 
+always @(posedge clk_400Hz)
+wei_ctrl &lt;= {wei_ctrl[2:0],wei_ctrl[3]};
+//段控制
+reg [3:0]duan_ctrl; 
+always @(wei_ctrl) 
+case(wei_ctrl)
+4'b1110:duan_ctrl=data[3:0]; 
+4'b1101:duan_ctrl=data[7:4]; 
+4'b1011:duan_ctrl=data[11:8];
+4'b0111:duan_ctrl=data[15:12]; 
+default:duan_ctrl=4'hf; 
+endcase
+//----------------------------------------------------------
+//解码模块
+reg [7:0]duan;
+always @(duan_ctrl) 
+case(duan_ctrl) 
+4'h0:duan=8'b0011_1111;//0
+4'h1:duan=8'b0000_0110;//1
+4'h2:duan=8'b0101_1011;//2
+4'h3:duan=8'b0100_1111;//3
+4'h4:duan=8'b0110_0110;//4
+4'h5:duan=8'b0110_1101;//5
+4'h6:duan=8'b0111_1101;//6
+4'h7:duan=8'b0000_0111;//7
+4'h8:duan=8'b0111_1111;//8
+4'h9:duan=8'b0110_1111;//9 
+4'ha:duan=8'b0111_0111;//a 
+4'hb:duan=8'b0111_1100;//b 
+4'hc:duan=8'b0011_1001;//c 
+4'hd:duan=8'b0101_1110;//d 
+4'he:duan=8'b0111_1000;//e 
+4'hf:duan=8'b0111_0001;//f 4'hg:duan=8'b1111_1111;//不显示
+default : duan = 8'b0011_1111;//0 
+endcase
+//----------------------------------------------------------
+assign sm_wei =~wei_ctrl; 
+assign sm_duan = duan; 
+endmodule</p>
+<p>module test(clk,data,out_LED3_NS,out_LED3_WE);
+input clk;
+output [15:0]data;
+output [2:0] out_LED3_NS,out_LED3_WE;
+//分频 1Hz 
+reg clk_1Hz;
+integer clk_1Hz_cnt; 
+always @(posedge clk)
+if(clk_1Hz_cnt==32'd25000000-1)
+begin clk_1Hz_cnt &lt;= 1'b0; clk_1Hz &lt;= ~clk_1Hz;end 
+else
+clk_1Hz_cnt &lt;= clk_1Hz_cnt + 1'b1;
+//----------------------------------------------------------
+//循环显示 0-9
+reg [15:0]data;
+reg[2:0] out_LED3_NS,out_LED3_WE; 
+reg[3:0] Time_10=2'd2,Time_1=2'd0; 
+reg[1:0] Stage=2'b00;
+always @(posedge clk_1Hz) 
+begin
+case(Stage)
+2'b00:
+begin//NS pass
+if((Time_10==0) &amp; (Time_1==0)) begin
+Stage&lt;=2'b11; 
+Time_10&lt;=4'd1; 
+Time_1 &lt;=4'd0; 
+end
+else
+begin 
+if(Time_1==0)
+begin 
+Time_1&lt;=4'd9;
+Time_10&lt;=Time_10-1; 
+end
+else</p>
+<p>begin 
+Time_1&lt;=Time_1-1; 
+end
+end
+data[15:8]&lt;={Time_10,Time_1}; 
+data[7:0]&lt;={Time_10,Time_1}; 
+out_LED3_NS&lt;=3'b001; 
+out_LED3_WE&lt;=3'b100;
+end 
+2'b01:
+begin//WE pass
+if((Time_10==0) &amp; (Time_1==0)) begin
+Stage&lt;=2'b10; 
+Time_10&lt;=4'd1; 
+Time_1 &lt;=4'd0; 
+end
+else begin 
+if(Time_1==0)
+begin</p>
+<p>Time_1&lt;=4'd9; 
+Time_10&lt;=Time_10-1; 
+end
+else
+begin 
+Time_1&lt;=Time_1-1; 
+end
+end
+data[15:8]&lt;={Time_10,Time_1}; 
+data[7:0]&lt;={Time_10,Time_1}; 
+out_LED3_WE&lt;=3'b001; 
+out_LED3_NS&lt;=3'b100;
+end 
+2'b10:
+begin//Yellow to NS pass 
+if((Time_10==0) &amp; (Time_1==0))
+begin 
+Stage&lt;=2'b00; 
+Time_10&lt;=4'd2; 
+Time_1 &lt;=4'd0; 
+end
+else begin 
+if(Time_1==0)
+begin 
+Time_1&lt;=4'd9;
+Time_10&lt;=Time_10-1; 
+end
+else</p>
+<p>begin 
+Time_1&lt;=Time_1-1; 
+end
+end
+data[15:8]&lt;={Time_10,Time_1}; 
+data[7:0]&lt;={Time_10,Time_1}; 
+out_LED3_NS&lt;=3'b010; 
+out_LED3_WE&lt;=3'b010;
+end 
+2'b11:
+begin//Yellow to WE pass 
+if((Time_10==0) &amp; (Time_1==0))
+begin 
+Stage&lt;=2'b01;
+Time_10&lt;=4'd2;
+Time_1 &lt;=4'd0; 
+end
+else
+begin 
+if(Time_1==0)
+begin 
+Time_1&lt;=4'd9;
+Time_10&lt;=Time_10-1; 
+end
+else</p>
+<p>begin 
+Time_1&lt;=Time_1-1; 
+end
+end
+data[15:8]&lt;={Time_10,Time_1}; 
+data[7:0]&lt;={Time_10,Time_1}; 
+out_LED3_NS&lt;=3'b010; 
+out_LED3_WE&lt;=3'b010;
+end 
+default:
+begin 
+Stage&lt;=2'b00; 
+Time_10&lt;=4'd2; 
+Time_1&lt;=4'd0; 
+end
+endcase 
+end 
+endmodule
+module smg(clk,sm_wei,sm_duan,out_LED3_NS,out_LED3_WE); 
+input clk;
+output [3:0]sm_wei; 
+output [7:0]sm_duan;
+output [2:0] out_LED3_NS,out_LED3_WE;
+//----------------------------------------------------------
+wire [15:0]data; 
+wire [3:0]sm_wei; 
+wire [7:0]sm_duan;
+wire [2:0] out_LED3_NS,out_LED3_WE;
+//----------------------------------------------------------
+test U0 (.clk(clk),.data(data),.out_LED3_NS(out_LED3_NS),.out_LED3_WE(out_LED3_WE));
+smg_ip_model U1 (.clk(clk),.data(data),.sm_wei(sm_wei),.sm_duan(sm_duan));
+endmodule</p>
+<p>set_property PACKAGE_PIN P17 [get_ports clk]
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+set_property PACKAGE_PIN G2 [get_ports {sm_wei[0]}]
+set_property PACKAGE_PIN C2 [get_ports {sm_wei[1]}]
+set_property PACKAGE_PIN C1 [get_ports {sm_wei[2]}]
+set_property PACKAGE_PIN H1 [get_ports {sm_wei[3]}]
+set_property PACKAGE_PIN B4 [get_ports {sm_duan[0]}]
+set_property PACKAGE_PIN A4 [get_ports {sm_duan[1]}]
+set_property PACKAGE_PIN A3 [get_ports {sm_duan[2]}]
+set_property PACKAGE_PIN B1 [get_ports {sm_duan[3]}]
+set_property PACKAGE_PIN A1 [get_ports {sm_duan[4]}]
+set_property PACKAGE_PIN B3 [get_ports {sm_duan[5]}]
+set_property PACKAGE_PIN B2 [get_ports {sm_duan[6]}]
+set_property PACKAGE_PIN D5 [get_ports {sm_duan[7]}]
+set_property PACKAGE_PIN G3 [get_ports {out_LED3_WE[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sm_duan[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sm_duan[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sm_duan[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sm_wei[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sm_wei[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sm_wei[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sm_wei[0]}]</p>
+<p>// 数码管IP核模块，用于控制数码管显示
+module smg_ip_model(clk, data, sm_wei, sm_duan);<br />
+    input clk;                // 输入时钟信号
+    input [15:0] data;        // 输入数据，用于数码管显示的内容
+    output [3:0] sm_wei;      // 位选信号，用于控制数码管的位
+    output [7:0] sm_duan;     // 段选信号，用于控制数码管的段
+    //----------------------------------------------------------
+    // 分频模块：将输入时钟分频为约400Hz的时钟
+    integer clk_cnt; 
+    reg clk_400Hz;
+    always @(posedge clk) 
+        if(clk_cnt == 32'd100000) begin
+            clk_cnt &lt;= 1'b0; 
+            clk_400Hz &lt;= ~clk_400Hz;
+        end else
+            clk_cnt &lt;= clk_cnt + 1'b1;</p>
+<div class="language-text highlight"><pre><span></span><code>//----------------------------------------------------------
+// 位控制：控制当前显示的数码管位（轮流选择）
+reg [3:0] wei_ctrl = 4&#39;b1110; 
+always @(posedge clk_400Hz)
+    wei_ctrl &lt;= {wei_ctrl[2:0], wei_ctrl[3]};  // 循环移位
+
+// 段控制：根据当前位控制信号选择相应的数据位
+reg [3:0] duan_ctrl; 
+always @(wei_ctrl) 
+    case(wei_ctrl)
+        4&#39;b1110: duan_ctrl = data[3:0];   // 显示最低位
+        4&#39;b1101: duan_ctrl = data[7:4];   // 显示第二位
+        4&#39;b1011: duan_ctrl = data[11:8];  // 显示第三位
+        4&#39;b0111: duan_ctrl = data[15:12]; // 显示最高位
+        default: duan_ctrl = 4&#39;hf;        // 默认值
+    endcase
+
+//----------------------------------------------------------
+// 解码模块：将4位二进制数据解码为数码管的段选信号
+reg [7:0] duan;
+always @(duan_ctrl) 
+    case(duan_ctrl) 
+        4&#39;h0: duan = 8&#39;b0011_1111;  // 数字0
+        4&#39;h1: duan = 8&#39;b0000_0110;  // 数字1
+        4&#39;h2: duan = 8&#39;b0101_1011;  // 数字2
+        4&#39;h3: duan = 8&#39;b0100_1111;  // 数字3
+        4&#39;h4: duan = 8&#39;b0110_0110;  // 数字4
+        4&#39;h5: duan = 8&#39;b0110_1101;  // 数字5
+        4&#39;h6: duan = 8&#39;b0111_1101;  // 数字6
+        4&#39;h7: duan = 8&#39;b0000_0111;  // 数字7
+        4&#39;h8: duan = 8&#39;b0111_1111;  // 数字8
+        4&#39;h9: duan = 8&#39;b0110_1111;  // 数字9
+        4&#39;ha: duan = 8&#39;b0111_0111;  // 字母A
+        4&#39;hb: duan = 8&#39;b0111_1100;  // 字母B
+        4&#39;hc: duan = 8&#39;b0011_1001;  // 字母C
+        4&#39;hd: duan = 8&#39;b0101_1110;  // 字母D
+        4&#39;he: duan = 8&#39;b0111_1000;  // 字母E
+        4&#39;hf: duan = 8&#39;b0111_0001;  // 字母F
+        default: duan = 8&#39;b1111_1111; // 默认值（不显示）
+    endcase
+
+//----------------------------------------------------------
+// 输出信号：将位选信号和段选信号输出
+assign sm_wei = ~wei_ctrl; // 取反后输出位选信号
+assign sm_duan = duan;     // 输出段选信号
+</code></pre></div>
+<p>endmodule</p>
+<p>// 测试模块，模拟交通灯和数码管显示逻辑
+module test(clk, data, out_LED3_NS, out_LED3_WE);
+    input clk;                     // 输入时钟信号
+    output reg [15:0] data;        // 输出数据，用于数码管显示
+    output reg [2:0] out_LED3_NS;  // 南北方向交通灯状态
+    output reg [2:0] out_LED3_WE;  // 东西方向交通灯状态</p>
+<div class="language-text highlight"><pre><span></span><code>// 分频模块：将输入时钟分频为1Hz的时钟
+reg clk_1Hz;
+integer clk_1Hz_cnt; 
+always @(posedge clk)
+    if(clk_1Hz_cnt == 32&#39;d25000000 - 1) begin
+        clk_1Hz_cnt &lt;= 1&#39;b0; 
+        clk_1Hz &lt;= ~clk_1Hz;
+    end else
+        clk_1Hz_cnt &lt;= clk_1Hz_cnt + 1&#39;b1;
+
+//----------------------------------------------------------
+// 交通灯状态机与计时器
+reg [3:0] Time_10 = 4&#39;d2, Time_1 = 4&#39;d0; // 计时器：十位和个位
+reg [1:0] Stage = 2&#39;b00;                 // 状态机：当前交通灯状态
+always @(posedge clk_1Hz) begin
+    case(Stage)
+        2&#39;b00: begin // 南北方向通过（绿灯）
+            if ((Time_10 == 0) &amp;&amp; (Time_1 == 0)) begin
+                Stage &lt;= 2&#39;b11;          // 切换到南北黄灯
+                Time_10 &lt;= 4&#39;d1; 
+                Time_1 &lt;= 4&#39;d0; 
+            end else begin
+                if (Time_1 == 0) begin  // 十位减1，个位归9
+                    Time_1 &lt;= 4&#39;d9;
+                    Time_10 &lt;= Time_10 - 1; 
+                end else
+                    Time_1 &lt;= Time_1 - 1;
+            end
+            data[15:8] &lt;= {Time_10, Time_1}; // 南北显示时间
+            data[7:0] &lt;= {Time_10, Time_1};  // 东西显示时间
+            out_LED3_NS &lt;= 3&#39;b001;           // 南北绿灯
+            out_LED3_WE &lt;= 3&#39;b100;           // 东西红灯
+        end
+        2&#39;b01: begin // 东西方向通过（绿灯）
+            if ((Time_10 == 0) &amp;&amp; (Time_1 == 0)) begin
+                Stage &lt;= 2&#39;b10;          // 切换到东西黄灯
+                Time_10 &lt;= 4&#39;d1; 
+                Time_1 &lt;= 4&#39;d0; 
+            end else begin
+                if (Time_1 == 0) begin
+                    Time_1 &lt;= 4&#39;d9; 
+                    Time_10 &lt;= Time_10 - 1; 
+                end else
+                    Time_1 &lt;= Time_1 - 1;
+            end
+            data[15:8] &lt;= {Time_10, Time_1}; 
+            data[7:0] &lt;= {Time_10, Time_1}; 
+            out_LED3_WE &lt;= 3&#39;b001;           // 东西绿灯
+            out_LED3_NS &lt;= 3&#39;b100;           // 南北红灯
+        end
+        2&#39;b10: begin // 南北黄灯
+            if ((Time_10 == 0) &amp;&amp; (Time_1 == 0)) begin
+                Stage &lt;= 2&#39;b00;          // 切换到南北绿灯
+                Time_10 &lt;= 4&#39;d2; 
+                Time_1 &lt;= 4&#39;d0; 
+            end else begin
+                if (Time_1 == 0) begin
+                    Time_1 &lt;= 4&#39;d9;
+                    Time_10 &lt;= Time_10 - 1; 
+                end else
+                    Time_1 &lt;= Time_1 - 1;
+            end
+            data[15:8] &lt;= {Time_10, Time_1}; 
+            data[7:0] &lt;= {Time_10, Time_1}; 
+            out_LED3_NS &lt;= 3&#39;b010;           // 南北黄灯
+            out_LED3_WE &lt;= 3&#39;b010;           // 东西黄灯
+        end
+        2&#39;b11: begin // 东西黄灯
+            if ((Time_10 == 0) &amp;&amp; (Time_1 == 0)) begin
+                Stage &lt;= 2&#39;b01;          // 切换到东西绿灯
+                Time_10 &lt;= 4&#39;d2;
+                Time_1 &lt;= 4&#39;d0; 
+            end else begin
+                if (Time_1 == 0) begin
+                    Time_1 &lt;= 4&#39;d9;
+                    Time_10 &lt;= Time_10 - 1; 
+                end else
+                    Time_1 &lt;= Time_1 - 1;
+            end
+            data[15:8] &lt;= {Time_10, Time_1}; 
+            data[7:0] &lt;= {Time_10, Time_1}; 
+            out_LED3_NS &lt;= 3&#39;b010;           // 南北黄灯
+            out_LED3_WE &lt;= 3&#39;b010;           // 东西黄灯
+        end
+        default: begin // 默认初始化状态
+            Stage &lt;= 2&#39;b00; 
+            Time_10 &lt;= 4&#39;d2; 
+            Time_1 &lt;= 4&#39;d0; 
+        end
+    endcase 
+end
+</code></pre></div>
+<p>endmodule</p>
+<p>// 顶层模块：将测试模块和数码管IP核模块连接
+module smg(clk, sm_wei, sm_duan, out_LED3_NS, out_LED3_WE); 
+    input clk;                     // 输入时钟信号
+    output [3:0] sm_wei;           // 位选信号
+    output [7:0] sm_duan;          // 段选信号
+    output [2:0] out_LED3_NS;      // 南北方向交通灯状态
+    output [2:0] out_LED3_WE;      // 东西方向交通灯状态</p>
+<div class="language-text highlight"><pre><span></span><code>//----------------------------------------------------------
+// 内部信号连接
+wire [15:0] data; 
+wire [3:0] sm_wei; 
+wire [7:0] sm_duan;
+wire [2:0] out_LED3_NS, out_LED3_WE;
+
+//----------------------------------------------------------
+// 实例化测试模块和数码管IP核模块
+test U0 (.clk(clk), .data(data), .out_LED3_NS(out_LED3_NS), .out_LED3_WE(out_LED3_WE));
+smg_ip_model U1 (.clk(clk), .data(data), .sm_wei(sm_wei), .sm_duan(sm_duan));
+</code></pre></div>
+<p>endmodule</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
