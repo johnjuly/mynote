@@ -90,6 +90,7 @@ nav:
         - cs/cs106l/classes.md 
         - cs/cs106l/containers.md 
         - cs/cs106l/initialization and references .md
+        - cs\cs106l\template functions.md
   - others:
     - examole.md
 
