@@ -75,15 +75,15 @@ nav:
     - 线性代数: linear algebra.md
   - CS:
     - 网络: cs/net.md
-    - 数据结构与算法: cs\language\c++\dsa.md
+    - 数据结构与算法: cs/language/c++/dsa.md
     - 嵌入式系统: 
-      - cs\embeded systen\embeded.1.md
-      - cs\embeded systen\embeded.md
+      - cs/embeded systen/embeded.1.md
+      - cs/embeded systen/embeded.md
     - 人工智能:
-      - cs\人工智能\search .md
-      - cs\人工智能\cs188 probability.md
+      - cs/人工智能/search .md
+      - cs/人工智能/cs188 probability.md
     - 计算机系统:
-      - cs\计算机系统\计算机系统概论.md
+      - cs/计算机系统/计算机系统概论.md
     - 工具:
       - cs/tools/git.md
     - c++学习:
@@ -91,29 +91,29 @@ nav:
         - cs/c++ 1.md
         - cs/c++ 2.md
       - cs106l:
-        - cs\language\c++\cs106l\types and structs.md
-        - cs\language\c++\cs106l\template functions.md
-        - cs\language\c++\cs106l\template classes.md
-        - cs\language\c++\cs106l\streams.md
-        - cs\language\c++\cs106l\operatoroverloading.md
-        - cs\language\c++\cs106l\iterators.md
-        - cs\language\c++\cs106l\initialization and references .md
-        - cs\language\c++\cs106l\functions and lambdas.md
-        - cs\language\c++\cs106l\classes.md
-        - cs\language\c++\cs106l\containers.md
+        - cs/language/c++/cs106l/types and structs.md
+        - cs/language/c++/cs106l/template functions.md
+        - cs/language/c++/cs106l/template classes.md
+        - cs/language/c++/cs106l/streams.md
+        - cs/language/c++/cs106l/operatoroverloading.md
+        - cs/language/c++/cs106l/iterators.md
+        - cs/language/c++/cs106l/initialization and references .md
+        - cs/language/c++/cs106l/functions and lambdas.md
+        - cs/language/c++/cs106l/classes.md
+        - cs/language/c++/cs106l/containers.md
 
       - c++2-2:
-         - cs\language\c++\c++2-2\datastructure.md
-         - cs\language\c++\c++2-2\projectrecord.md
-         - cs\language\c++\c++2-2\wxwidgets.md
-         - cs\language\c++\c++2-2\cppexercise.md
-    - python: cs\language\python\python.md
-    - verilog: cs/language\assembly\verilog.md
+         - cs/language/c++/c++2-2/datastructure.md
+         - cs/language/c++/c++2-2/projectrecord.md
+         - cs/language/c++/c++2-2/wxwidgets.md
+         - cs/language/c++/c++2-2/cppexercise.md
+    - python: cs/language/python/python.md
+    - verilog: cs/language/assembly/verilog.md
 
-    - 汇编语言: cs\language\sssembly\assembly language.md
+    - 汇编语言: cs/language/sssembly/assembly language.md
 
   - read:
-    - csapp:read\csapprnote1.md
+    - csapp:read/csapprnote1.md
     
   - others:
     - examole.md
