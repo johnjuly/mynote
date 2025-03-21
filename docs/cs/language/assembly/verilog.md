@@ -1658,3 +1658,21 @@ module smg(clk, sm_wei, sm_duan, out_LED3_NS, out_LED3_WE);
     test U0 (.clk(clk), .data(data), .out_LED3_NS(out_LED3_NS), .out_LED3_WE(out_LED3_WE));
     smg_ip_model U1 (.clk(clk), .data(data), .sm_wei(sm_wei), .sm_duan(sm_duan));
 endmodule
+
+
+3/4
+{},位宽，缩减运算符判断全1
+
+非阻塞 先把a b拿出来 到end再赋值
+阻塞 上完成了再做下
+输入输出写在小括号内减少繁琐
+
+
+
+3/18
+位拼接 移位操作
+显示 高低32位 两格显示64位的数
+
+* 接受3个操作数 a*b+c;
+* inputselect两位 00 01 10;
+

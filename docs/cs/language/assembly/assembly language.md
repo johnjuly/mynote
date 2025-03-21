@@ -191,7 +191,7 @@ code segment
 
       mov cx,12
 
-  s:  mov dl.[bx]
+  s:  mov dl,[bx]
       mov es:[bx],dl
       inc bx
       loop s
