@@ -77,7 +77,7 @@ nav:
     - 网络: cs/net.md
     - 数据结构与算法: cs/language/c++/dsa.md
     - 嵌入式系统: 
-      - cs/embeded systen/embeded.1.md
+      - cs/embeded systen/embeded.0.md
       - cs/embeded systen/embeded.md
     - 人工智能:
       - cs/人工智能/search .md
