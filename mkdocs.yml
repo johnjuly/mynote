@@ -72,7 +72,7 @@ nav:
     - music theory: art/music theory.md
     - design book: art/design book.md
   - Math:
-    - 线性代数: linear algebra.md
+    - 线性代数: cs/math/linear algebra.md
   - CS:
     - 网络: cs/net.md
     - 数据结构与算法: cs/language/c++/dsa.md
@@ -88,8 +88,8 @@ nav:
       - cs/tools/git.md
     - c++学习:
       - hj:
-        - cs/c++ 1.md
-        - cs/c++ 2.md
+        - cs/language/c++/hj/c++ 1.md
+        - cs/language/c++/hj/c++ 2.md
       - cs106l:
         - cs/language/c++/cs106l/types and structs.md
         - cs/language/c++/cs106l/template functions.md
