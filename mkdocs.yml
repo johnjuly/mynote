@@ -72,7 +72,8 @@ nav:
     - music theory: art/music theory.md
     - design book: art/design book.md
   - Math:
-    - 线性代数: cs/math/linear algebra.md
+    - 线性代数: math/linear algebra.md
+    - 离散数学: math/discreate math.md
   - CS:
     - 网络: cs/net.md
     - 数据结构与算法: cs/language/c++/dsa.md
@@ -86,6 +87,9 @@ nav:
       - cs/计算机系统/计算机系统概论.md
     - 工具:
       - cs/tools/git.md
+      - the missing semester:
+        - shell.md
+        - cs/tools/the missing semester/shell tools and scripts.md
     - c++学习:
       - hj:
         - cs/language/c++/hj/c++ 1.md
@@ -113,7 +117,7 @@ nav:
     - 汇编语言: cs/language/sssembly/assembly language.md
 
   - read:
-    - csapp:read/csapprnote1.md
+    - csapp: read/csapprnote1.md
     
   - others:
     - examole.md
