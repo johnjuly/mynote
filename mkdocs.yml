@@ -83,6 +83,11 @@ nav:
     - 人工智能:
       - cs/人工智能/search .md
       - cs/人工智能/cs188 probability.md
+
+    - 数据库系统:
+      - cs/db/1.md
+      - cs/db/sql.md
+
     - 计算机系统:
       - cs/计算机系统/计算机系统概论.md
     - 工具:
