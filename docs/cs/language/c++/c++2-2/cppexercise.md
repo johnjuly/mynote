@@ -47,3 +47,46 @@ week 6
 
  '/0'与'\0'的不同啊，会出现一个报错D:\petto\Documents\programs\c++\practice\exercise.cpp|16|warning: multi-character character constant [-Wmultichar]|
  
+
+
+ 最大公约数 ……辗转相除法
+
+ ```cpp
+
+ int gcd(int a,int b){
+
+    if (b==0)return a;
+
+    return gcd(b,a%b);
+
+ }
+
+
+ ```
+
+ 可以想象为一个长为a宽为b的长方形，求能够分他们的最小单元
+
+ * 构造函数如何提供默认值？在传参的时候写就好。rational (int a=0,int b=0)
+
+
+
+
+ * 后置自增的写法？
+
+
+ ```cpp
+
+
+ operator ++(int)
+{}
+
+
+ ```
+
+
+
+ 重载赋值时要注意避免自赋值
+
+
+
+ swich 只接受整形和字符型啊
