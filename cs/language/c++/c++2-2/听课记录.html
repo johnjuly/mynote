@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2262,6 +2262,81 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#part-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      part 5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="part 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值运算符重载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paet1" class="md-nav__link">
+    <span class="md-ellipsis">
+      继承与多态 paet1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      part2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="part2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      派生类的拷贝构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      友元的继承
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2305,6 +2380,58 @@
 </ul>
 <h2 id="part-3">part 3</h2>
 <p>include &lt;&gt;和“”的区别</p>
+<h2 id="part-5">part 5</h2>
+<h3 id="_3">赋值运算符重载</h3>
+<p>赋值 输入输出</p>
+<p>返回本身 <code>return *this</code>： 可作为左值</p>
+<ol>
+<li>引用传参 ，减少内存转移</li>
+<li>加const  保证不会改变实参的值</li>
+<li>以引用的格式返回自身对象，可作为左值参与运算</li>
+<li>为成员函数而不是友元函数</li>
+</ol>
+<p>了解：后缀加加 临时对象保存原值，返回临时对象以引用形式返回
+原值参与运算，自身加1
+<img alt="alt text" src="image-2.png" /></p>
+<h3 id="_4">链表</h3>
+<h2 id="paet1">继承与多态 paet1</h2>
+<p>共同特征 基类</p>
+<p>构造函数初始化 字符串指针开辟空间 拷贝</p>
+<p><img alt="alt text" src="image-3.png" /></p>
+<ul>
+<li>final 最后的类不可再派生</li>
+</ul>
+<p><img alt="alt text" src="image-4.png" />
+去更严格的</p>
+<p>派生类成员根据访问权限分为四类
+多了一个不可访问的成员</p>
+<p><img alt="alt text" src="image-5.png" />
+保护也不可访问</p>
+<p>按继承的顺序初始化，按照声明的顺序</p>
+<h2 id="part2_1">part2</h2>
+<p>核心：七八两章</p>
+<p>属性成员对位赋值</p>
+<h3 id="_5">派生类的拷贝构造函数</h3>
+<p>用一个已经存在的对象创建一个新的对象</p>
+<ul>
+<li>const</li>
+<li>&amp; 引用</li>
+</ul>
+<p>在类内进行访问： this 指针 自己 ；相同类 其他对象的属性成员，私有也可 只限制类定义中的成员函数，而不限制该函数访问的是哪个对象的属性成员</p>
+<p>派生类构造之前先构造基类</p>
+<p>派生类中可以使用using关键字显式地继承基类地构造函数，<strong>无参构造函数除外</strong>默认调用</p>
+<p><code>using box::box</code>继承所有有参的构造函数</p>
+<ul>
+<li>初始化列表里的顺序不重要，只起到参数匹配的作用，还是看定义中继承的顺序以及声明的自定义类对象的顺序</li>
+</ul>
+<h3 id="_6">友元的继承</h3>
+<p><strong>基类的友元不继承</strong>
+一样的东西可以访问，权限一样</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>赋值：两边的对象都存在
+  拷贝构造</p>
+</div>
 
 
 

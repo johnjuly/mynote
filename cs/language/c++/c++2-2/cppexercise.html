@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2356,6 +2356,30 @@ setw(n) 仅下一个输出项 仅控制紧随其后的一个输出的宽度一�
 例如，在实现像 operator+= 这样的成员函数时，你可以修改当前对象并返回 *this，这样返回的是当前对象的引用，且该对象在调用者那边依然有效。</p>
 <p>strncpy(str, s, MaxLength - 1);     // 安全拷贝字符串 </p>
 <p>'/0'与'\0'的不同啊，会出现一个报错D:\petto\Documents\programs\c++\practice\exercise.cpp|16|warning: multi-character character constant [-Wmultichar]|</p>
+<p>最大公约数 ……辗转相除法</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>可以想象为一个长为a宽为b的长方形，求能够分他们的最小单元</p>
+<ul>
+<li>
+<p>构造函数如何提供默认值？在传参的时候写就好。rational (int a=0,int b=0)</p>
+</li>
+<li>
+<p>后置自增的写法？</p>
+</li>
+</ul>
+<p>```cpp</p>
+<p>operator ++(int)
+{}</p>
+<p>```</p>
+<p>重载赋值时要注意避免自赋值</p>
+<p>swich 只接受整形和字符型啊</p>
 
 
 
