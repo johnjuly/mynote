@@ -14,7 +14,7 @@
         <link rel="prev" href="wxwidgets.html">
       
       
-        <link rel="next" href="../../python/python.html">
+        <link rel="next" href="%E5%90%AC%E8%AF%BE%E8%AE%B0%E5%BD%95.html">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -1138,6 +1138,8 @@
       
         
       
+        
+      
     
     
     
@@ -1208,6 +1210,29 @@
   
   <span class="md-ellipsis">
     介绍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../db/sql2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    advanved
     
   </span>
   
@@ -1953,6 +1978,8 @@
       
         
       
+        
+      
     
     
     
@@ -2125,6 +2152,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%90%AC%E8%AF%BE%E8%AE%B0%E5%BD%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    听课记录
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2431,16 +2481,16 @@
 <ul>
 <li>
 <p>3/15 牛客构造函数
-原来在构造函数里面完成初始化操作可以让用户进行输入，这样在类里也可以访问私有成员了；</p>
+  原来在构造函数里面完成初始化操作可以让用户进行输入，这样在类里也可以访问私有成员了；</p>
 </li>
 <li>
-<p>setfill控制的是一整个cout流只写</p>
+<p>setfill 控制的是一整个 cout 流只写</p>
 </li>
 </ul>
-<p>操作符 作用范围    示例效果
-setfill('0')    全局（直到再次修改）  所有后续setw用0填充
+<p>操作符 作用范围 示例效果
+setfill('0') 全局（直到再次修改） 所有后续 setw 用 0 填充
 setw(n) 仅下一个输出项 仅控制紧随其后的一个输出的宽度一个就好
-尽管用c也可 printf("04%d,02%d,02%d",y,m,d)</p>
+尽管用 c 也可 printf("04%d,02%d,02%d",y,m,d)</p>
 <p>setfill 中使用单引号非双引号；</p>
 <ul>
 <li>闰年判断的条件</li>
@@ -2450,15 +2500,17 @@ setw(n) 仅下一个输出项 仅控制紧随其后的一个输出的宽度一�
 <li>为什么拷贝构造函数数组时要先释放空间呢是因为先调用了默认构造？</li>
 </ul>
 <p>week 6
-在C++中，类的成员函数可以访问该类的所有对象的私有成员，而不仅限于当前对象。这是由C++的访问控制规则决定的，访问权限是基于类而非实例的。
-* 矩阵乘法： aij=aik*akj</p>
+在 C++中，类的成员函数可以访问该类的所有对象的私有成员，而不仅限于当前对象。这是由 C++的访问控制规则决定的，访问权限是基于类而非实例的。</p>
+<ul>
+<li>矩阵乘法： aij=aik*akj</li>
+</ul>
 <p>在运算符重载中，返回引用通常有两个前提条件：</p>
 <p>引用的对象必须在函数返回后依然存在：
 如果你在函数内部创建了一个局部对象（例如一个局部变量）并返回它的引用，那么这个引用会成为悬空引用，因为局部变量在函数结束后会被销毁。</p>
 <p>返回引用的目的是为了避免不必要的拷贝，且引用指向的对象本身可以安全地被共享：
 例如，在实现像 operator+= 这样的成员函数时，你可以修改当前对象并返回 *this，这样返回的是当前对象的引用，且该对象在调用者那边依然有效。</p>
-<p>strncpy(str, s, MaxLength - 1);     // 安全拷贝字符串 </p>
-<p>'/0'与'\0'的不同啊，会出现一个报错D:\petto\Documents\programs\c++\practice\exercise.cpp|16|warning: multi-character character constant [-Wmultichar]|</p>
+<p>strncpy(str, s, MaxLength - 1); // 安全拷贝字符串</p>
+<p>'/0'与'\0'的不同啊，会出现一个报错 D:\petto\Documents\programs\c++\practice\exercise.cpp|16|warning: multi-character character constant [-Wmultichar]|</p>
 <p>最大公约数 ……辗转相除法</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -2468,7 +2520,7 @@ setw(n) 仅下一个输出项 仅控制紧随其后的一个输出的宽度一�
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>可以想象为一个长为a宽为b的长方形，求能够分他们的最小单元</p>
+<p>可以想象为一个长为 a 宽为 b 的长方形，求能够分他们的最小单元</p>
 <ul>
 <li>
 <p>构造函数如何提供默认值？在传参的时候写就好。rational (int a=0,int b=0)</p>
@@ -2477,12 +2529,17 @@ setw(n) 仅下一个输出项 仅控制紧随其后的一个输出的宽度一�
 <p>后置自增的写法？</p>
 </li>
 </ul>
-<p>```cpp</p>
-<p>operator ++(int)
-{}</p>
-<p>```</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">operator</span><span class="w"> </span><span class="o">++</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{}</span>
+</span></code></pre></div>
 <p>重载赋值时要注意避免自赋值</p>
 <p>swich 只接受整形和字符型啊</p>
+<p><img alt="alt text" src="image-6.png" />
+<img alt="alt text" src="image-7.png" />
+DD 继承 D2, D1,按照继承顺序先调用 D2 构造函数，再调用 D1 构造函数
+<img alt="alt text" src="image-8.png" />
+上而非下</p>
+<p>熟悉 string 的 api 么 作业二关于字符串的继承</p>
 
 
 
