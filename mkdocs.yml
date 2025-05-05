@@ -4,7 +4,7 @@ repo_name: johnjuly/mynote
 repo_url: https://github.com/johnjuly/mynote/
 edit_uri: edit/main/docs/
 
-use_directory_urls: false    # 加上这句后才能显示用 html img 相对路径插入的图片
+use_directory_urls: false # 加上这句后才能显示用 html img 相对路径插入的图片
 
 theme:
   name: material
@@ -30,18 +30,16 @@ theme:
     - navigation.top
   font: false
   palette:
-   # Palette toggle for light mode
+    # Palette toggle for light mode
     - scheme: default
-      primary:
-       white
+      primary: white
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
-      primary:
-       black
+      primary: black
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -64,68 +62,67 @@ markdown_extensions:
 
 nav:
   - Home:
-    - index.md
+      - index.md
   - Thinking:
-    - maxism: thinking/maxism.md
-    - lit: thinking/dy.md
+      - maxism: thinking/maxism.md
+      - lit: thinking/dy.md
   - Art:
-    - music theory: art/music theory.md
-    - design book: art/design book.md
+      - music theory: art/music theory.md
+      - design book: art/design book.md
   - Math:
-    - 线性代数: math/linear algebra.md
-    - 离散数学: math/discreate math.md
+      - 线性代数: math/linear algebra.md
+      - 离散数学: math/discreate math.md
   - CS:
-    - 网络: cs/net.md
-    - 数据结构与算法: cs/language/c++/dsa.md
-    - 嵌入式系统: 
-      - cs/embeded systen/embeded.0.md
-      - cs/embeded systen/embeded.md
-    - 人工智能:
-      - cs/人工智能/search .md
-      - cs/人工智能/cs188 probability.md
+      - 网络: cs/net.md
+      - 数据结构与算法: cs/language/c++/dsa.md
+      - 嵌入式系统:
+          - cs/embeded systen/embeded.0.md
+          - cs/embeded systen/embeded.md
+      - 人工智能:
+          - cs/人工智能/search .md
+          - cs/人工智能/cs188 probability.md
 
-    - 数据库系统:
-      - cs/db/1.md
-      - cs/db/sql.md
+      - 数据库系统:
+          - cs/db/1.md
+          - cs/db/sql.md
+          - cs/db/sql2.md
 
-    - 计算机系统:
-      - cs/计算机系统/计算机系统概论.md
-    - 工具:
-      - cs/tools/git.md
-      - the missing semester:
-        - shell.md
-        - cs/tools/the missing semester/shell tools and scripts.md
-    - c++学习:
-      - hj:
-        - cs/language/c++/hj/c++ 1.md
-        - cs/language/c++/hj/c++ 2.md
-      - cs106l:
-        - cs/language/c++/cs106l/types and structs.md
-        - cs/language/c++/cs106l/template functions.md
-        - cs/language/c++/cs106l/template classes.md
-        - cs/language/c++/cs106l/streams.md
-        - cs/language/c++/cs106l/operatoroverloading.md
-        - cs/language/c++/cs106l/iterators.md
-        - cs/language/c++/cs106l/initialization and references .md
-        - cs/language/c++/cs106l/functions and lambdas.md
-        - cs/language/c++/cs106l/classes.md
-        - cs/language/c++/cs106l/containers.md
+      - 计算机系统:
+          - cs/计算机系统/计算机系统概论.md
+      - 工具:
+          - cs/tools/git.md
+          - the missing semester:
+              - shell.md
+              - cs/tools/the missing semester/shell tools and scripts.md
+      - c++学习:
+          - hj:
+              - cs/language/c++/hj/c++ 1.md
+              - cs/language/c++/hj/c++ 2.md
+          - cs106l:
+              - cs/language/c++/cs106l/types and structs.md
+              - cs/language/c++/cs106l/template functions.md
+              - cs/language/c++/cs106l/template classes.md
+              - cs/language/c++/cs106l/streams.md
+              - cs/language/c++/cs106l/operatoroverloading.md
+              - cs/language/c++/cs106l/iterators.md
+              - cs/language/c++/cs106l/initialization and references .md
+              - cs/language/c++/cs106l/functions and lambdas.md
+              - cs/language/c++/cs106l/classes.md
+              - cs/language/c++/cs106l/containers.md
 
-      - c++2-2:
-         - cs/language/c++/c++2-2/datastructure.md
-         - cs/language/c++/c++2-2/projectrecord.md
-         - cs/language/c++/c++2-2/wxwidgets.md
-         - cs/language/c++/c++2-2/cppexercise.md
-    - python: cs/language/python/python.md
-    - verilog: cs/language/assembly/verilog.md
+          - c++2-2:
+              - cs/language/c++/c++2-2/datastructure.md
+              - cs/language/c++/c++2-2/projectrecord.md
+              - cs/language/c++/c++2-2/wxwidgets.md
+              - cs/language/c++/c++2-2/cppexercise.md
+              - cs/language/c++/c++2-2/听课记录.md
+      - python: cs/language/python/python.md
+      - verilog: cs/language/assembly/verilog.md
 
-    - 汇编语言: cs/language/sssembly/assembly language.md
+      - 汇编语言: cs/language/sssembly/assembly language.md
 
   - read:
-    - csapp: read/csapprnote1.md
-    
+      - csapp: read/csapprnote1.md
+
   - others:
-    - examole.md
-
-
-  
+      - examole.md
