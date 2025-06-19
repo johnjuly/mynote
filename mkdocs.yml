@@ -78,6 +78,9 @@ nav:
       - 嵌入式系统:
           - cs/embeded systen/embeded.0.md
           - cs/embeded systen/embeded.md
+      - 软件安全:
+          - cs/软件安全/review.md
+
       - 人工智能:
           - cs/人工智能/search .md
           - cs/人工智能/cs188 probability.md
