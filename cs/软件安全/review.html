@@ -1,0 +1,6832 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://johnjuly.github.io/mynote/cs/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8/review.html">
+      
+      
+        <link rel="prev" href="../embeded%20systen/embeded.html">
+      
+      
+        <link rel="next" href="../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/search%20.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Review - johnjuly的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="johnjuly的笔记本" class="md-header__button md-logo" aria-label="johnjuly的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            johnjuly的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Review
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/johnjuly/mynote/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    johnjuly/mynote
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../thinking/maxism.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Thinking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../art/music%20theory.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Art
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../math/linear%20algebra.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../net.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../read/csapprnote1.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  read
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examole.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  others
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="johnjuly的笔记本" class="md-nav__button md-logo" aria-label="johnjuly的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    johnjuly的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/johnjuly/mynote/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    johnjuly/mynote
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Thinking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Thinking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thinking/maxism.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    maxism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thinking/dy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Art
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Art
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../art/music%20theory.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    music theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../art/design%20book.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    design book
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/linear%20algebra.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性代数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/discreate%20math.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    离散数学
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            CS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../net.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    网络
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/dsa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据结构与算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    嵌入式系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            嵌入式系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../embeded systen/embeded.0.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../embeded%20systen/embeded.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    week 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    软件安全
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            软件安全
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Review
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="review.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 基本概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 病毒和木马
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 软件漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 软件漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 软件安全漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 漏洞分类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2 漏洞分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0day" class="md-nav__link">
+    <span class="md-ellipsis">
+      0day 漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1day" class="md-nav__link">
+    <span class="md-ellipsis">
+      1day 漏洞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 漏洞产业链
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 漏洞库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 漏洞库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-cve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 CVE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-nvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 NVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-cnnvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 CNNVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-cnvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 CNVD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 渗透测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 渗透测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 渗透测试方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 堆栈基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 堆栈基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 内存区域
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 内存区域">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆区和栈区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="堆区和栈区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆与栈的区别
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="堆结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      （1）堆块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      （2）堆表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      （3）堆块的分配和释放
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="函数调用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用的步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见寄存器和栈帧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要寄存器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主要寄存器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      变址寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      指针寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      段寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令指针寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      标志寄存器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      汇编语言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="汇编语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存寻址方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内存寻址方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令寻址（两种）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作数寻址
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主要指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据传送指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      位运算指令集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      算术运算指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序流程控制指令集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试分析工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="调试分析工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pe" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE 文件格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚拟内存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试分析工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE 文件代码注入示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件破解示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="软件漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      溢出漏洞基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      栈溢出漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆溢出漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他溢出漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他溢出漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEH 攻击
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      单字节溢出
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      格式化字符串漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="格式化字符串漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      格式化字符串漏洞的利用-数据泄露
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      格式化字符串漏洞的利用-数据写入 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      整数溢出漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      攻击 c++虚函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他类型漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他类型漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.注入类型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.注入类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      sql 注入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作系统命令注入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      web 脚本语言注入
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.权限类漏洞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞利用基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞利用概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      手段
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用的核心
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      exploit 结构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      覆盖临接变量示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 代码植入示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编写
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shellcode 编写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      编写的难点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单编写 shellcode 的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shellcode 编码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编码必要性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编码方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      异或编码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞利用技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      windows 安全防护技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="windows 安全防护技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-aslraddressspace-layout-randomization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ASLR(addressspace layout randomization)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gs-stack-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. GS stack protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dep" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 DEP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-safeseh" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 safeseh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-sehop" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 sehop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      地址定位技术（3 种）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="地址定位技术（3 种）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-shellcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 静态 shellcode 地址的利用技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 基于跳板指令的地址定位技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 内存喷洒技术
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      api 函数自搜索技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="api 函数自搜索技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      引入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messageboxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      通用编写逻辑（以 messageboxa 函数调用为例）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-oriented-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      返回导向编程 return-oriented programming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      绕过其他安全防护
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="绕过其他安全防护">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aslr" class="md-nav__link">
+    <span class="md-ellipsis">
+      aslr 缺陷和绕过方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      seh 保护机制缺陷和绕过方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞挖掘基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞挖掘基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号执行
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      污点分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="污点分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本思想：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心要素:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      词法分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="词法分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 基本概念
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据流分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据流分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 方法分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 程序代码模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于数据流的漏洞分析流程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      模糊测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模糊测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      模糊测试步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      智能模糊测试
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afl" class="md-nav__link">
+    <span class="md-ellipsis">
+      AFL 模糊测试框架
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AFL 模糊测试框架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作流程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞挖掘技术进阶
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞挖掘技术进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序切片技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序切片技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      控制流图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序依赖图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统依赖图
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序切片方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序切片方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      图可达算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态切片
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序插桩技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序插桩技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      插桩分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin" class="md-nav__link">
+    <span class="md-ellipsis">
+      pin 插桩示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pin 插桩示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pintool" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 pintool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      消息 hook 技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="消息 hook 技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hook_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      hook 概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      消息 hook
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="消息 hook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hook-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于消息 hook 的 dll 注入
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      api hook 技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="api hook 技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号执行基本原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z3 约束求解器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angr 应用示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      污点分析基本原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      污点分析方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      web 进阶
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/search%20.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Search 
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/cs188%20probability.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cs188 probability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../db/1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../db/sql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    介绍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../db/sql2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    advanved
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            计算机系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一周 计算机系统概述
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/git.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_2" id="__nav_5_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    the missing semester
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            the missing semester
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/the missing semester/shell tools and scripts.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    c++学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            c++学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9_1" id="__nav_5_9_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    hj
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            hj
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/hj/c%2B%2B%201.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/hj/c%2B%2B%202.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++ 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9_2" id="__nav_5_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    cs106l
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            cs106l
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/types%20and%20structs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Types and structs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/template%20functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/template%20classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/streams.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/operatoroverloading.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operatoroverloading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/iterators.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iterators
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/initialization%20and%20references%20.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Initialization and references 
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/functions%20and%20lambdas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functions and lambdas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/cs106l/containers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9_3" id="__nav_5_9_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    c++2-2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            c++2-2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/c%2B%2B2-2/datastructure.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/c%2B%2B2-2/projectrecord.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projectrecord
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/c%2B%2B2-2/wxwidgets.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wxwidgets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/c%2B%2B2-2/cppexercise.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cppexercise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/c%2B%2B/c%2B%2B2-2/%E5%90%AC%E8%AF%BE%E8%AE%B0%E5%BD%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    听课记录
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/python/python.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/assembly/verilog.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    verilog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language/sssembly/assembly language.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    汇编语言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    read
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            read
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../read/csapprnote1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    csapp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    others
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examole.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examole
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 基本概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 病毒和木马
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 软件漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 软件漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 软件安全漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 漏洞分类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2 漏洞分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0day" class="md-nav__link">
+    <span class="md-ellipsis">
+      0day 漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1day" class="md-nav__link">
+    <span class="md-ellipsis">
+      1day 漏洞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 漏洞产业链
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 漏洞库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 漏洞库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-cve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 CVE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-nvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 NVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-cnnvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 CNNVD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-cnvd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 CNVD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 渗透测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 渗透测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 渗透测试方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 堆栈基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 堆栈基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 内存区域
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 内存区域">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆区和栈区
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="堆区和栈区">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆与栈的区别
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="堆结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      （1）堆块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      （2）堆表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      （3）堆块的分配和释放
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="函数调用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用的步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见寄存器和栈帧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要寄存器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主要寄存器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      变址寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      指针寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      段寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令指针寄存器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      标志寄存器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      汇编语言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="汇编语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存寻址方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内存寻址方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令寻址（两种）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作数寻址
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主要指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据传送指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      位运算指令集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      算术运算指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序流程控制指令集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      函数调用示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试分析工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="调试分析工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pe" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE 文件格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚拟内存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试分析工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pe_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE 文件代码注入示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件破解示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="软件漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      溢出漏洞基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      栈溢出漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      堆溢出漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他溢出漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他溢出漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seh" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEH 攻击
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      单字节溢出
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      格式化字符串漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="格式化字符串漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      格式化字符串漏洞的利用-数据泄露
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      格式化字符串漏洞的利用-数据写入 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      整数溢出漏洞
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      攻击 c++虚函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他类型漏洞
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他类型漏洞">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.注入类型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.注入类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      sql 注入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作系统命令注入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      web 脚本语言注入
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.权限类漏洞
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞利用基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞利用概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      手段
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用的核心
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      exploit 结构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      覆盖临接变量示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 代码植入示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编写
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shellcode 编写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      编写的难点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单编写 shellcode 的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shellcode 编码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编码必要性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shellcode_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      shellcode 编码方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      异或编码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞利用技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞利用技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      windows 安全防护技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="windows 安全防护技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-aslraddressspace-layout-randomization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ASLR(addressspace layout randomization)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gs-stack-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. GS stack protection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dep" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 DEP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-safeseh" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 safeseh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-sehop" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 sehop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      地址定位技术（3 种）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="地址定位技术（3 种）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-shellcode" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 静态 shellcode 地址的利用技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 基于跳板指令的地址定位技术
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 内存喷洒技术
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      api 函数自搜索技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="api 函数自搜索技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      引入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messageboxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      通用编写逻辑（以 messageboxa 函数调用为例）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-oriented-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      返回导向编程 return-oriented programming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      绕过其他安全防护
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="绕过其他安全防护">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aslr" class="md-nav__link">
+    <span class="md-ellipsis">
+      aslr 缺陷和绕过方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      seh 保护机制缺陷和绕过方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞挖掘基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞挖掘基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号执行
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      污点分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="污点分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本思想：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心要素:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      词法分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="词法分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 基本概念
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据流分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据流分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 方法分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 程序代码模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于数据流的漏洞分析流程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      模糊测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模糊测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      模糊测试步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      智能模糊测试
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#afl" class="md-nav__link">
+    <span class="md-ellipsis">
+      AFL 模糊测试框架
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AFL 模糊测试框架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作流程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      漏洞挖掘技术进阶
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="漏洞挖掘技术进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序切片技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序切片技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      控制流图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序依赖图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统依赖图
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序切片方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序切片方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      工作原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      图可达算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      动态切片
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序插桩技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序插桩技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      插桩分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin" class="md-nav__link">
+    <span class="md-ellipsis">
+      pin 插桩示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pin 插桩示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pintool" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 pintool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      消息 hook 技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="消息 hook 技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hook_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      hook 概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      消息 hook
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="消息 hook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hook-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于消息 hook 的 dll 注入
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      api hook 技术
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="api hook 技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号执行基本原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z3 约束求解器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#angr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Angr 应用示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      污点分析基本原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      污点分析方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      web 进阶
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1"></h1>
+<h2 id="1">1 基本概念</h2>
+<h3 id="11">1.1 病毒和木马</h3>
+<ul>
+<li>
+<p><strong>病毒</strong>：<em>自我执行</em>：将自己的代码置于另一个程序的执行路径；<em>自我复制</em>：可能受病毒感染的文件副本替换其他可执行文件。</p>
+</li>
+<li>
+<p><strong>蠕虫 worm</strong>:利用网络进行复制和传播，<strong>自包含</strong>的程序，能传播自身功能的拷贝或自身的某些部分到其他的计算机系统中</p>
+</li>
+<li>普通病毒与蠕虫病毒的区别</li>
+<li>复制方式：普通病毒需要传播受感染的驻留文件来进行复制，而蠕虫不使用驻留文件即可在系统之间进行自我复制</li>
+<li>普通病毒的传染能力主要是针对计算机内的文件系统而言，而蠕虫病毒的传染目标是互联网内的所有计算机。</li>
+<li>两个经典的蠕虫病毒</li>
+<li>震网：(stuxnet)攻击真实世界基础设施，（能源）核电站、睡吧、国家电网</li>
+<li>比特币勒索：wannacry(wanna decryptor)微软视窗</li>
+<li><strong>木马（Trojan Horse）</strong>表面上是有用的软件，实际目的却是危害计算机安全并导致严重破坏的计算机程序。</li>
+<li>隐蔽性</li>
+<li>非授权性：一旦控制端与服务端连接后，控制端将窃取到服务端的很多操作权限，如修改文件、修改注册表、控制鼠标、键盘、窃取信息等</li>
+<li>木马与病毒的区别<ul>
+<li><strong>木马不具有传染性，它并不能像病毒那样复制自身，业并不刻意地去感染其他文件，它主要通过将自身伪装起来，吸引用户下载执行</strong></li>
+<li><strong>木马一般主要以窃取用户相关信息或隐蔽性控制为主要目的</strong>，病毒破环你的信息，而木马窥视你。</li>
+</ul>
+</li>
+</ul>
+<h3 id="12">1.2 软件漏洞</h3>
+<h4 id="121">1.2.1 软件安全漏洞</h4>
+<ul>
+<li><strong>软件缺陷 bug</strong>:程序员编的软件造成的问题导致软件崩溃不能运行</li>
+<li>
+<p><strong>软件漏洞</strong>：软件中存在的一些问题可以在某种情况下被利用来对用户造成恶意攻击，如给用户计算机安装木马病毒，或者直接盗取用户计算机上都秘密信息，这时软件的问题不再是 bug 而是软件安全漏洞了</p>
+</li>
+<li>
+<p><strong>电脑肉鸡</strong>：<strong>受别人控制的远程电脑</strong>，植入木马</p>
+</li>
+</ul>
+<h4 id="122">1.2.2 漏洞分类</h4>
+<h5 id="0day">0day 漏洞</h5>
+<blockquote>
+<p><strong>还处于未公开状态的漏洞</strong></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>是当前网络战中的核武器</strong></p>
+</li>
+<li>
+<div class="admonition example 入侵伊朗的震网病毒">
+<p class="admonition-title">Example</p>
+<ul>
+<li><strong>微软操作系统</strong>中的至少4个漏洞，3个全新的0day漏洞</li>
+<li>西门子公司的<strong>数据采集</strong>和<strong>监控系统wincc系统</strong>的<strong>2个漏洞</strong></li>
+</ul>
+</div>
+</li>
+</ul>
+<h5 id="1day">1day 漏洞</h5>
+<blockquote>
+<p><strong>发布补丁时间不长的漏洞</strong></p>
+</blockquote>
+<ul>
+<li>已公开漏洞：<strong>厂商已经发布补丁或修补方法，大多数用户都已打过补丁的漏洞</strong></li>
+</ul>
+<h4 id="123">1.2.3 漏洞产业链</h4>
+<ul>
+<li>
+<p><strong>网络黑客产业链有很多环节，或者说分上中下游，其中每一个环节都有其利润所在，相互协作，上下游之间为供需关系</strong></p>
+</li>
+<li>
+<p>上游：技术开发；中游：执行，生产，实施病毒传播，信息窃取，网络攻击；下游：销赃，销售</p>
+</li>
+</ul>
+<h3 id="13">1.3 漏洞库</h3>
+<h4 id="131-cve">1.3.1 CVE</h4>
+<blockquote>
+<p>美国资助。common vulnerabilities and exposures</p>
+</blockquote>
+<ul>
+<li>行业标准</li>
+<li><strong>实现了安全漏洞命名机制的规范化和标准化</strong></li>
+</ul>
+<h4 id="132-nvd">1.3.2 NVD</h4>
+<blockquote>
+<p>national vulenrabilities database</p>
+</blockquote>
+<ul>
+<li>美国国家标准与技术局 NIST</li>
+<li><strong>收录三个漏洞数据库的信息</strong>，cve,us-cert,cert</li>
+<li>数据量最大，条目最多的漏洞数据库之一</li>
+</ul>
+<h4 id="133-cnnvd">1.3.3 CNNVD</h4>
+<blockquote>
+<p>China National Vulnerability Database of information security</p>
+</blockquote>
+<ul>
+<li><strong>中国信息安全测评中心</strong></li>
+</ul>
+<h4 id="134-cnvd">1.3.4 CNVD</h4>
+<blockquote>
+<p><strong>国家信息安全漏洞共享平台</strong></p>
+</blockquote>
+<ul>
+<li>联合国内重要信息系统单位，基础电信运营商、网络安全厂商建立的信息安全漏洞信息共享知识库</li>
+</ul>
+<h3 id="14">1.4 渗透测试</h3>
+<h4 id="141">1.4.1 基本概念</h4>
+<blockquote>
+<p><strong>通过模拟恶意黑客的攻击方法，来评估计算机网络系统安全的一种评估方法</strong>
+渗透人员在不同位置（内外网）利用各种手段对某个特定网络进行测试，以期发现和挖掘系统中存在的漏洞，然后输出渗透测试报告，并交给网络所有者。</p>
+</blockquote>
+<ul>
+<li>两个显著特点：</li>
+<li>渐进，逐步深入</li>
+<li>不影响业务系统正常运行</li>
+</ul>
+<h4 id="142">1.4.2 渗透测试方法</h4>
+<ul>
+<li>黑箱测试：zero-knowlege testing,信息获取来自 dns,web,email 及各种公开对外的服务器</li>
+<li>白盒</li>
+<li>隐秘：对被侧单位而言，极少数人知晓</li>
+</ul>
+<h2 id="2">2 堆栈基础</h2>
+<p>编制程序的四个步骤：编辑 编译 链接 运行</p>
+<h3 id="21">2.1 内存区域</h3>
+<blockquote>
+<p>一个<u> <strong>进程</strong></u>可能被<strong>分配到不同的内存区域去执行</strong></p>
+</blockquote>
+<p>-四类：代码区，静态数据区，堆区，栈区</p>
+<h4 id="_2">堆区和栈区</h4>
+<ul>
+<li>栈：<strong>主要存储函数运行时的局部变量、数组</strong>，栈变量在使用时不需要额外的申请操作，系统栈会根据函数中的变量声明自动为其预留内存空间，同样，栈变量的释放也无需程序员参与由系统栈跟随函数调用的结束自动回收。</li>
+<li>栈区是向<strong>低地址扩展</strong>的数据结构，是一种先入后出的特殊结构，栈顶的地址和栈的最大容量是系统预先规定好的，在 windows 下，栈的默认大小是 2m，如果申请的空间超过栈的剩余空间时，将会提示溢出</li>
+<li><strong>堆区是一种程序运行时动态分配的内存，</strong>所谓动态，就是说所需内存的大小在程序设计过大无法在栈区分配，需要在程序运行的时候参考用户的反馈</li>
+<li>堆区在使用的时候需要程序员<strong>使用专有的函数进行申请</strong>，如 c 语言的 malloc 函数，c++语言的 new 函数，它是<strong>向高地址扩展的数据结构，堆的大小受限于计算机的虚拟内存</strong></li>
+</ul>
+<h5 id="_3">堆与栈的区别</h5>
+<ul>
+<li>申请方式：栈：由系统自动分配，例如：声明一个局部变量 Int b,系统自动在栈中为 b 开辟空间；堆：需要程序员自己申请，并指明大小，在 c 中 malloc 函数，如<code>p1=(char *) malloc(10)</code></li>
+<li>申请效率：栈由系统自动分配，速度较快，但程序员无法控制；堆是由程序员分配的内存，一般速度比较慢，并且容易产生内存碎片，不过用起来方便</li>
+</ul>
+<h4 id="_4">堆结构</h4>
+<p>堆包括堆块和堆表两部分</p>
+<ul>
+<li>
+<p><strong>堆块是堆的基本组织单位，包括两个部分，即块首和块身</strong>。块首是用来标识这个堆块的信息，例如块大小，空闲还是占用；块身紧随其后，是最终分配给用户使用的数据区。</p>
+</li>
+<li>
+<p><strong>堆表一般位于整个堆区的开始位置，用于索引堆区中所有堆块的重要信息</strong>，包括堆块的位置，堆块的大小，空闲还是占用等。堆表的数据结构决定了整个堆区的组织方式，是快速检索空闲块，保证块分配效率的关键，堆表在设计的时候，可能会采用平衡二叉树等高效数据结构用于优化查找效率。现代操作系统的堆表往往不止一种数据结构</p>
+</li>
+</ul>
+<h5 id="1_1">（1）堆块</h5>
+<ul>
+<li><strong>指向堆块的指针或者句柄，指向的是块身的首地址</strong>。也就是，我们使用函数申请得到的地址指针都会越过 8 字节的块首，直接指向数据区，块身。</li>
+<li><strong>堆块的大小包括块首在内</strong>，如果申请 32 字节，实际会分配 40 字节</li>
+<li><strong>堆块的单位是 8 字节</strong></li>
+</ul>
+<h5 id="2_1">（2）堆表</h5>
+<ul>
+<li><strong>占有态的堆块被使用他的程序索引，而堆表只索引所有空闲态的堆块</strong>。其中，最重要的堆表有两种：<strong>空闲双向链表 freelist(简称空表)和快速单向链表 lookaside</strong>.快表是为了加速堆块分配而采用的堆表，从来不发生堆块合并，由于堆溢出一般不利用快表，故不作详述</li>
+<li>空表包括<strong>空表索引</strong>和<strong>空闲链块</strong>两个部分。空表索引也叫空表表头，是一个大小为 128 的指针数组，该指针的每一项包括两个指针，用于标识一条空表</li>
+</ul>
+<h5 id="3">（3）堆块的分配和释放</h5>
+<blockquote>
+<p>以空表为例，来讲解堆块的分配、释放和合并</p>
+</blockquote>
+<ul>
+<li><strong>堆块分配</strong>：依据既定的查找空闲堆块的策略，找到合适的空闲堆块之后，将其状态修改为占用态，把它从堆表中卸下、返回一个指向堆块块身的指针给程序使用。</li>
+<li><strong>普通空表分配时首先寻找最优的空闲块分配，</strong>若失败，一个稍大些的块会被用于分配。这种<strong>次优</strong>分配发生时，<strong>会先从大块中按请求的大小精确地“割”出一块进行分配，然后给剩下的部分重新标注块首，链入空表</strong>。也就是说，<strong>空表分配存在找零钱的情况。</strong></li>
+<li>零号空表中按照大小升序链着大小不同的空闲块，故在分配时先从 free[0]反向查找最后一个块（即最大块），看能否满足要求，如果满足要求，再正向搜索最小能满足要求的空闲堆块进行分配。</li>
+<li><strong>堆块释放</strong>。操作包括将堆块状态由占用态改为空闲态，链入相应的堆表。所有释放的堆块都链入相应的表尾</li>
+<li><strong>堆块合并</strong>。堆块的分配和释放可能引发堆块合并。即当堆管理系统发现两个空闲堆块相邻时，就会进行堆块合并操作。合并包括的几个动作：将堆块从空表中卸下、合并堆块、修改合并后的块首、链接入新的链表</li>
+</ul>
+<h3 id="_5"><strong>函数调用</strong></h3>
+<ul>
+<li>
+<p>函数调用时将借助系统栈来完成函数状态的保存和恢复</p>
+</li>
+<li>
+<p><strong>当函数被调用时，系统栈会为这个函数开辟一个新的栈帧，并把它压入栈中</strong>。<strong>每个栈帧对应着一个未运行完的函数</strong>。从逻辑上讲，栈帧就是一个函数的执行环境：函数参数、函数局部变量、函数执行完后返回到哪里等等。</p>
+</li>
+<li>当函数返回时，系统栈会弹出该函数所对应的栈帧</li>
+</ul>
+<h4 id="_6">函数调用的步骤</h4>
+<ol>
+<li>参数入栈：从右向左依次压入系统栈</li>
+<li>返回地址入栈：将当前代码区调用指令的下一条指令地址压入栈中，供函数返回时继续执行</li>
+<li>代码区跳转：处理器</li>
+<li>栈帧调整：</li>
+<li>保存当前栈帧状态值，以备后面恢复本栈帧时使用</li>
+<li>将当前栈帧切换到新栈帧</li>
+</ol>
+<h3 id="_7">常见寄存器和栈帧</h3>
+<p>概念</p>
+<ul>
+<li><strong>我们长看到的 32 位 cpu，63 位 cpu 这样的名称，其实指的就是寄存器的大小</strong></li>
+<li>两个特殊的寄存器用于标识位于<strong>系统栈顶端的栈帧</strong>：</li>
+<li>esp:<strong>栈指针寄存器</strong>永远指向系统栈最上面一个栈帧的栈顶</li>
+<li>ebp:<strong>基址指针寄存器</strong>永远指向系统栈最上面一个栈帧的底部</li>
+<li>换句话说，<strong>esp 和 ebp 之间的内存空间为当前栈帧，ebp 标识了当前栈帧的底部，esp 标识了当前栈帧的顶部</strong></li>
+<li>在函数栈帧中，一般包含以下几类重要信息：</li>
+<li>
+<ol>
+<li>局部变量</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>栈帧状态值，保存前栈帧底部，前栈帧的顶部可以通过堆栈平衡计算得到？，用于在本帧被弹出后恢复出上一个栈帧</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>函数返回地址。保存当前函数调用前的断点信息，也就是函数调用前的指令位置，以便在函数返回时能够恢复到函数被调用前的代码区中继续执行指令</li>
+</ol>
+</li>
+<li>
+<p><strong>除了与栈相关的寄存器，另外一个重要的寄存器</strong>：</p>
+</li>
+<li>
+<p><strong>指令寄存器：</strong>，其内存放着一个指针，<u>该指针永远指向下一条等待执行的指令地址，</u>,可以说<strong>如果控制了 eip 寄存器的内容，就控制了进程</strong></p>
+</li>
+<li>
+<p>在函数调用过程中：保存当前栈帧状态值，已被后面恢复本栈帧时使用（ebp 入栈）；将当前栈帧切换到新栈帧（esp 赋值给 ebp,更新栈帧底部）</p>
+</li>
+</ul>
+<h3 id="_8">主要寄存器</h3>
+<h4 id="_9">数据寄存器</h4>
+<blockquote>
+<p><strong>用来保存操作数和运算结果等信息</strong></p>
+</blockquote>
+<ul>
+<li>eax:累加器。（accumulator），<strong>通常用于存储函数的返回值</strong></li>
+<li>ebx:基地址寄存器：作为存储器指针，访问存储器</li>
+<li>ecx：count,循环次数，位操作移位</li>
+<li>edx:data;乘除运算可作为默认操作数参与运算，也可用于存放 i/o 的端口地址</li>
+</ul>
+<h4 id="_10">变址寄存器</h4>
+<blockquote>
+<p><strong>变址寄存器主要用来存放操作数的地址，用于堆栈操作和变址运算中计算操作数的有效地址</strong></p>
+</blockquote>
+<ul>
+<li>esi:源地址指针</li>
+<li>edi:目的地址指针</li>
+</ul>
+<h4 id="_11">指针寄存器</h4>
+<ul>
+<li>寄存器 ebp 和 esp，<strong>主要用于存放堆栈内存储单元的偏移量，用他们来实现多种存储器操作数的寻址方式</strong>，为以不同的地址形式访问存储单元提供方便；</li>
+<li>ebp,通过它减去一定的偏移值，来访问栈中的元素；</li>
+<li>esp 时钟指向栈顶</li>
+</ul>
+<h4 id="_12">段寄存器</h4>
+<ul>
+<li>
+<p><strong>段寄存器是根据内存分段的管理模式而设置的，内存单元的物理地址由段寄存器的值和一个偏移量组合而成</strong></p>
+</li>
+<li>
+<p>融合变址寄存器，在很多字符串操作指令中，ds:dsi 指向源串而 es:edi 指向目标串</p>
+</li>
+</ul>
+<h4 id="_13">指令指针寄存器</h4>
+<ul>
+<li><strong>IR</strong>,instruction register,<strong>是临时放置从内存里面取得的程序指令的寄存器，用于存放当前从主存储器读出的正在执行的一条指令</strong></li>
+<li><strong>指令指针寄存器用英文简称为 IP(isntruction pointer)</strong>,<strong>指令指针寄存器存放下次要执行的指令在代码段的偏移量</strong></li>
+<li><strong>32 位 cpu 把指令指针扩展到 32 位，并记作 EIP</strong></li>
+</ul>
+<h4 id="_14">标志寄存器</h4>
+<ul>
+<li><strong>标志寄存器在 32 位操作系统中大小是 32 位的，也就是说，它可以存 32 个标志</strong>，重点认识三个标志寄存器</li>
+<li><strong>Z-Flag(零标志)</strong>：设为 0 或 1</li>
+<li><strong>O-falg(溢出标志)</strong>：</li>
+<li><strong>C-falg</strong>(进位标志)</li>
+</ul>
+<h2 id="_15">汇编语言</h2>
+<h3 id="_16"><strong>内存寻址方式</strong></h3>
+<ul>
+<li><strong>寻址方式就是处理器根据指令中给出的地址信息来寻找有效地址的方式，是确定本条指令的数据地址以及下一条要执行的指令地址的方法。</strong></li>
+<li><strong>当采用地址指定方式时，形成操作数或指令地址的方式称为寻址方式</strong></li>
+</ul>
+<h4 id="_17">指令寻址（两种）</h4>
+<ol>
+<li><strong>顺序寻址方式</strong>：通常需要使用指令计数器来完成顺序指令寻址，在<strong>x86</strong>架构称为 Ip 指令指针寄存器，在<strong>arm</strong>或<strong>c51</strong>架构中也称为程序计数器 pc</li>
+<li><strong>跳跃寻址方式</strong>：下条指令的地址吗不是由程序计数器给出，而是由本条指令给出，程序跳跃后，按新的指令地址开始顺序执行，跳跃的结果是当前指令修改 pc 程序计数器的值，所以下一条指令仍是通过程序计数器 pc 给出</li>
+</ol>
+<h4 id="_18">操作数寻址</h4>
+<ol>
+<li>立即寻址：<strong>指令的地址字段给出的不是操作数的地址，而是操作数本身，这种寻址方式称为立即寻址</strong>，<code>mov cl,05H</code></li>
+<li>直接寻址：<strong>由于操作数的地址直接给出而不经过某种变换，所以称这种寻址方式位直接寻址方式</strong><code>mov al ,[3100H]</code>表示将地址[3100H]中的数据存储到 al 中</li>
+<li>通常情况下，操作数放在数据段中，所以，默认情况下，操作数的物理地址由数据段寄存器 ds 中的值和指令给出的有效地址直接形成，上述指令中，操作数的物理地址应为 ds:31000H</li>
+<li><strong>但是，如果在指令中使用段超远前缀指定使用的段，则可从其他段中取出数据，如:mov al ,es:[3100H] ? 所以他也是直接寻址吗</strong></li>
+<li>间接寻址：<strong>指令地址字段中的形式地址不是操作数的真正地址，而是操作数地址的指示器</strong>，或者说，此形式地址单元的内容才是操作数的有效地址。<code>mov [bx],12H</code>这是一种寄存器间接寻址，bx 寄存器存操作数的偏移地址，操作数的物理地址应该时 ds:bx,表示将 12H 这个数据存储到 ds:bx 中</li>
+<li>寄存器寻址，操作数放在寄存器中，通过指定寄存器来获取数据。<code>mov bx ,12H</code></li>
+<li>相对寻址：操作数的有效地址是一个基址寄存器或变址寄存器（si,di）的值加上指令中给定的偏移量之和。<code>mov ax,[di+1234H]</code>操作数的物理地址应该是 ds:di+1234H,与间接寻址相比，可以认为<strong>相对寻址是在间接寻址基础上，添加了偏移量</strong></li>
+<li>基址变址寻址：<strong>将基址寄存器的内容，加上变址寄存器的内容而形成操作数的有效地址</strong><code>mov eax,[ebx+esi]</code></li>
+<li>相对基址变址寻址:<strong>在基址变址寻址方式融合的相对 1 寻址方式，即增加偏移量</strong><code>mov eax,[ebx+esi+1000H]</code></li>
+</ol>
+<h3 id="_19">主要指令</h3>
+<h4 id="_20">数据传送指令</h4>
+<ul>
+<li>mov;xchg;push;pop;pushf,popf,pusha,popa;lea,lds,les;</li>
+</ul>
+<h4 id="_21">位运算指令集</h4>
+<p>and,or,xor,not,</p>
+<h4 id="_22">算术运算指令</h4>
+<h4 id="_23">程序流程控制指令集</h4>
+<ul>
+<li>
+<p>cmp:比较两个值是否相等，相等则设置 zf 为 1,若 A=B，则 A-B=0，因此 ZF=1</p>
+</li>
+<li>
+<p>call:将当前 eip 中的指令地址压入栈中，并调用 call 后的子程序</p>
+</li>
+</ul>
+<h3 id="_24">函数调用示例</h3>
+<h2 id="_25">调试分析工具</h2>
+<h3 id="pe">PE 文件格式</h3>
+<h3 id="_26">虚拟内存</h3>
+<p><strong>计算法</strong>虚拟地址=基址+相对
+<strong>lordpe</strong>获得信息地址界面熟悉</p>
+<h3 id="_27">调试分析工具</h3>
+<h3 id="pe_1">PE 文件代码注入示例</h3>
+<h3 id="_28">软件破解示例</h3>
+<h2 id="_29">软件漏洞</h2>
+<h3 id="_30">溢出漏洞基本概念</h3>
+<ul>
+<li>
+<p><strong>漏洞也称为脆弱性（vulnerability）</strong></p>
+</li>
+<li>
+<p>造成缓冲区溢出的根本原因：<strong>缺乏类型安功能的程序设计语言</strong>，<strong>部分函数不对数组边界条件和函数指针引用等进行边界检查，数组和指针都没有自动边界检查</strong></p>
+</li>
+</ul>
+<h3 id="_31">栈溢出漏洞</h3>
+<p>为什么 why u are here ；
+<img alt="alt text" src="image.png" /></p>
+<p>在函数 f 中，所声明的数组长度为 1</p>
+<p>返回地址-ebp-buff;</p>
+<ul>
+<li><strong>返回地址被覆盖</strong></li>
+<li><strong>邻接变量被覆盖</strong></li>
+<li>输入的密码为 8 个字符</li>
+<li>输入的字符串大于 12345678.因为执行 strcmp 之后要确保 authenticated 的值为 1，其他字节为 0。小端</li>
+<li><img alt="alt text" src="image-1.png" /></li>
+</ul>
+<h3 id="_32">堆溢出漏洞</h3>
+<blockquote>
+<p><strong>覆盖一个目标堆块的块身数据</strong></p>
+</blockquote>
+<p>堆块的分配 释放</p>
+<ul>
+<li>
+<p><strong>dwordshoot</strong> 攻击 原理 能够向任意位置内存写入任意数据的攻击。通过堆溢出覆写一个<strong>空闲堆块</strong>的块首的前向指针和后指针，精心构造一个地址和数据，获得一次向内存构造的任意地址写入一个任意数据的机会</p>
+</li>
+<li>
+<p><strong>堆块的三类操作：</strong>堆块分配、堆块释放、堆块合并。堆空表链的修改。</p>
+</li>
+<li><strong>向链表里链入和卸下堆块</strong></li>
+<li><strong>在 Windows 堆内存分配时会调用函数 rtlallocheap</strong>，该函数从空闲堆链上摘下一空闲堆块，完成双向链表里相关节点的前后指针的变更操作</li>
+</ul>
+<h3 id="_33">其他溢出漏洞</h3>
+<p>的原理 特点</p>
+<h4 id="seh">SEH 攻击</h4>
+<ul>
+<li><strong>通过栈溢出或者其他漏洞，使用精心构造的数据覆盖 seh 链表的入口地址、异常处理函数句柄或者链表指针等，</strong>实现程序执行流程的控制</li>
+</ul>
+<h4 id="_34">单字节溢出</h4>
+<p>程序的缓冲区仅能溢出一个字节，他溢出的一个字节必须与栈帧指针紧挨，就是要求必须是函数中<strong>首个变量</strong>。</p>
+<h3 id="_35">格式化字符串漏洞</h3>
+<ul>
+<li>printf()的第一个参数就是格式化字符串，他来告诉程序将数据以什么格式输出
+  <strong>printf()函数特性</strong></li>
+</ul>
+<p><code>printf("format",输出表列)</code>，format 的结构为:% [标志][输出最小宽度][.精度][长度]类型</p>
+<ul>
+<li>控制 format 参数之后结合<strong>printf()函数特性</strong>就可以进行相应攻击</li>
+</ul>
+<p>读
+写：%n 给格式化函数输出字符串的函数</p>
+<h4 id="-">格式化字符串漏洞的利用-数据泄露</h4>
+<ul>
+<li><strong>特性一：格式化字符串允许可变参数</strong></li>
+<li>它根据传入的格式化字符串获知可变参数的个数和类型，并根据格式化符号进行参数的输出。如果调用这些函数时，给出了格式化符号传，但<strong>没有提供实际对应参数时</strong>，<u>这些函数会将格式化字符串后面的多个栈中的内容取出作为参数，并根据格式化符号将其输出。</u>
+    &gt; %X 以 16 进制形式输出堆栈内容，为%S 则输出对应地址所指向的字符串</li>
+</ul>
+<h4 id="-1">格式化字符串漏洞的利用-数据写入 1</h4>
+<ul>
+<li><strong>特性二：利用%n 格式符写入数据</strong></li>
+</ul>
+<blockquote>
+<p>它的作用是将格式化函数输出字符串的长度，写入函数参数指定的位置</p>
+</blockquote>
+<ul>
+<li><code>printf("Jamsa%n",&amp;first_count)</code>，将向整形变量 first_count 处写入整数 5</li>
+<li>sprintf()函数的作用是<strong>把格式化的数据写入某个字符串缓冲区</strong></li>
+<li><img alt="alt text" src="image-2.png" /></li>
+<li>
+<p>数值 10 被写入地址为 0x61616161 的内存单元</p>
+<ul>
+<li>首先，aaaabbbbcc 写入 buffer,然后，从堆栈中取出下一个参数，<strong>并将其当作整数指针使用</strong>，由于调用 sprintf 时没有传入下一个参数，因而<strong>buffer 中的前四个字节被当作参数</strong>，同样可以实现向任意内存写入任意数值</li>
+</ul>
+</li>
+<li>
+<p><strong>特性三：自定义打印字符串宽度</strong></p>
+</li>
+<li>
+<p><strong>在格式符中间加上一个中间加上一个十进制整数来表示输出的最少位数</strong>，若实际位数多于定义的宽度，则按实际位数输出，若实际位数少于定义的宽度则补以空格或 0.</p>
+</li>
+</ul>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="cp">#</span><span class="w"> </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">main</span><span class="p">(){</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="o">=</span><span class="mi">66666666</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Before :num=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">num</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%100d%n</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">num</span><span class="p">,</span><span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;After:num=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">num</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="_36">整数溢出漏洞</h3>
+<blockquote>
+<p>当对整数进行加、乘等运算时，计算的结果如果大于该类型的整数所表示的范围时，就会发生整数溢出</p>
+</blockquote>
+<ul>
+<li>根据溢出原理的不同，可以分为三类：</li>
+<li>存储溢出：使用另外的数据类型来存储整型树造成的，大变量放入小变量</li>
+<li>运算溢出：对整形变量进行运算时没有考虑到其边界范围</li>
+<li>符号问题：有符号和无符号。忽略了符号，在进行安全检查判断的时候就可能出现问题</li>
+</ul>
+<h3 id="c">攻击 c++虚函数</h3>
+<ul>
+<li><strong>虚函数的入口地址被统一保存在虚表中</strong></li>
+<li><strong>对象在使用虚函数时，先通过虚表指针找到虚表，然后从虚表中取出最终的函数入口地址进行调用</strong></li>
+<li>
+<p><strong>虚表指针保存在对象的内存空间中，紧接着虚表指针的是其他成员变量；虚函数的入口地址被统一存在虚表中</strong></p>
+</li>
+<li>
+<p>攻击虚函数：对象使用虚函数时通过调用虚表指针找到虚表，然后从虚表中取出最终的函数入口地址进行调用。如果需表里存储的虚函数指针被篡改，程序调用虚函数时就会执行篡改后的指定地址的 shellcode，发动虚函数攻击</p>
+</li>
+</ul>
+<h3 id="_37">其他类型漏洞</h3>
+<h4 id="1_2">1.注入类型</h4>
+<ul>
+<li>分类：</li>
+<li><strong>二进制代码注入</strong>：将计算机可以执行的二进制代码注入到<strong>应用程序的执行代码</strong>中</li>
+<li><strong>脚本注入</strong>：通过特定的<strong>脚本解释类</strong>程序提交可被解释执行的数据</li>
+</ul>
+<h5 id="sql">sql 注入</h5>
+<blockquote>
+<p>将 web 页面的原 url 表单域或数据包输入的参数，修改拼接的 sql 语句传递给 web 服务器，进而传给数据库服务器一致性数据库命令</p>
+</blockquote>
+<h5 id="_38">操作系统命令注入</h5>
+<p><strong>大多数 web 服务器都能够使用内置 api 与服务器的操作系统进行几乎任何必须的交互，如 Php 中的 system,exex 和 asp 中的 wscript 类函数</strong></p>
+<h5 id="web">web 脚本语言注入</h5>
+<ul>
+<li>合并了用户提交数据的代码的动态执行</li>
+<li>
+<p>根据用户的数据指定的带啊吗文件的动态包含</p>
+</li>
+<li>
+<p>soap 协议注入：xml 解释性语言</p>
+</li>
+</ul>
+<h4 id="2_2">2.权限类漏洞</h4>
+<ul>
+<li>水平与垂直越权</li>
+</ul>
+<h2 id="_39">漏洞利用基础</h2>
+<h3 id="_40">漏洞利用概念</h3>
+<h4 id="_41">概念</h4>
+<ul>
+<li><strong>是指针对已有的漏洞，根据漏洞的类型和特点而采取的相应的技术方案，进行尝试性或实质性的攻击。</strong></li>
+</ul>
+<h4 id="_42">手段</h4>
+<ul>
+<li>96 年的一篇论文《smashing the stack for fun and profit》，演示了如何向进程中植入一段用于获得 shell 的代码，并在论文中称这段<strong>被植入进程的代码为"shellcode"</strong>.现在 shellcode 指的是<strong>广义上的植入进程的代码</strong></li>
+</ul>
+<h4 id="_43">漏洞利用的核心</h4>
+<ul>
+<li><strong>利用程序漏洞去劫持进程的控制权，实现控制流劫持，以便执行植入的 shellcode 或者达到其他的攻击目的</strong></li>
+<li>内存错误漏洞，当攻击者掌握后，发起控制流劫持攻击；早期攻击采用代码植入的方式；栈溢出漏洞攻击的目的是<strong>淹没返回地址</strong></li>
+</ul>
+<h4 id="exploit">exploit 结构</h4>
+<ul>
+<li>漏洞利用要达到攻击目标，要做的工作更多，比如<strong>对应的出发漏洞、将控制权转移到 shellcode</strong>一般均不相同，而且他们通常独立于 shellcode 的代码</li>
+<li><strong>能实现特定目标的 exploit 的有效载荷，称为 payload</strong></li>
+<li>一个经典的比喻，将漏洞利用过程比作导弹发射的过程：<strong>exploit,payload,shellcode 分别是导弹发射装置，导弹和弹头</strong>。导弹除了弹头之外的其余部分用来实现对目标进行定位追踪、对弹头引爆等功能，在漏洞利用中，对应 payload 的非 shellcode 部分</li>
+<li><strong>exploit 利用漏洞进行攻击的动作；shellcode 用来实现具体的功能；payload 除了包含 shellcode 之外，还需要考虑如何触发漏洞并让系统或者程序去执行 shellcode</strong></li>
+</ul>
+<h3 id="_44">覆盖临接变量示例</h3>
+<p><img alt="alt text" src="image-9.png" />
+<img alt="alt text" src="image-10.png" />
+<img alt="alt text" src="image-11.png" /></p>
+<ul>
+<li>
+<p><strong>利用目标：</strong>利用溢出覆盖临接变量，实现控制流劫持，完成软件破解</p>
+</li>
+<li>
+<p>淹没 flag 状态位，使其变为 0；设计 buffer(44 字节)+1 字节(整数 0)，即向 reg.txt 写入 45 个字节，其中最后一个字节位 0</p>
+</li>
+</ul>
+<h3 id="shellcode">shellcode 代码植入示例</h3>
+<ul>
+<li>
+<p><strong>利用目标：</strong>利用溢出覆盖返回地址，转去执行植入的恶意程序
+  <img alt="alt text" src="image-12.png" /></p>
+</li>
+<li>
+<p><strong>植入代码前需要做大量的调试工作</strong></p>
+</li>
+<li>目标：植入一段代码，使其达到可以淹没返回地址，该返回地址将执行一个 messagebox 函数，弹出窗体</li>
+<li>为了能淹没返回地址，需要在 reg.txt 至少写入 buffer+flag+前 ebp 的字节。</li>
+<li>让程序弹出一个消息框只需要调用 windows 的 api 函数 messagebox 函数</li>
+<li>
+<p>用汇编语言调用 Messageboxa 需要三个步骤</p>
+</li>
+<li>
+<p><strong>装载动态链接库 user32.dll</strong></p>
+</li>
+<li>在汇编语言中调用这个函数<strong>获得函数的入口地址</strong></li>
+<li>
+<p>在调用前需要<strong>向栈中按从右向左的顺序压入</strong></p>
+</li>
+<li>
+<p>第一步：<strong>获取函数入口地址</strong>：messageboxa 的入口地址可以通过 user32.dll 在系统中加载的基址 messageboxa 在库中的偏移相加得到；也可以用代码来获取相关函数地址</p>
+</li>
+<li>第二步：<strong>编写函数调用的汇编代码</strong></li>
+<li>第三步：注入 shellcode 代码，<strong>将得到的二进制 shellcode 写入 reg.txt 文件中，并在返回地址写入 buffer 的地址</strong></li>
+</ul>
+<h3 id="shellcode_1">shellcode 编写</h3>
+<h4 id="_45">编写的难点</h4>
+<ol>
+<li><strong>对一些特定字符需要转码</strong>，null 字符串的终结，strcpy 等函数造成的缓冲区溢出</li>
+<li><strong>函数 api 的定位很困难</strong></li>
+</ol>
+<h4 id="shellcode_2">简单编写 shellcode 的方法</h4>
+<ol>
+<li>用 c 语言书写要执行的 shellcode 代码</li>
+<li>转换成对应的汇编代码，对于 push 0;xor ebx ebx</li>
+<li>根据汇编代码，找到对应地址中的机器码</li>
+</ol>
+<h3 id="shellcode_3">shellcode 编码</h3>
+<h4 id="shellcode_4">shellcode 编码必要性</h4>
+<ul>
+<li><strong>字符集的差异</strong></li>
+<li><strong>绕过换字符</strong> 0x0D(\r)、0x0A(\n)或者 0x20(空格)</li>
+<li><strong>绕过安全防护检测</strong></li>
+</ul>
+<h4 id="shellcode_5">shellcode 编码方法</h4>
+<ul>
+<li><strong>网页 shellcode</strong>:采用<strong>base64 编码</strong></li>
+<li><strong>二进制机器代码</strong>：采用类似加壳的思想</li>
+<li>自定义编码（异或、计算、简单加解密）</li>
+<li>精心构造<em>精简干练的解码程序</em>，放在 shellcode 开始执行的地方，完成编解码；当 exploit 成功时，shellcode 顶端的解码程序首先运行，它会在内存中将真正的 shellcode 还原成原来的样子，然后执行。</li>
+</ul>
+<h4 id="_46">异或编码</h4>
+<ul>
+<li><strong>编码程序是独立的</strong>。选取编码字节时，不可与已有字节相同，否则会出现 0</li>
+<li>异或 0x44</li>
+<li>怎么让 eax 记录 shellcode 当前的起始位置？</li>
+</ul>
+<div class="language-asm highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">call</span><span class="w"> </span><span class="no">label</span><span class="c1">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nl">lable:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">pop</span><span class="w"> </span><span class="no">eax</span>
+</span></code></pre></div>
+<ul>
+<li><strong>call 会执行 push eip</strong>;eip 的值又是下一条指令 pop eax 的地址;pop eax 会将栈顶 eip(自身指令地址)出栈，保存到 eax</li>
+</ul>
+<h2 id="_47">漏洞利用技术</h2>
+<h3 id="windows">windows 安全防护技术</h3>
+<p><strong>原理</strong>都要知道</p>
+<h4 id="1-aslraddressspace-layout-randomization">1. ASLR(addressspace layout randomization)</h4>
+<ul>
+<li>通过将系统关键地址随机化，从而使攻击者无法获得需要跳转的精确地址的技术。</li>
+<li>aslr 随机化个关键系统地址包括：pe 文件（exe 文件和 dll 文件）映像加载地址，堆栈基址，对地址，peb 进程环境快和 teb 线程环境快地址等</li>
+<li>两种方法：操作系统加载时的地址变化和可执行程序编译时的编译器选项</li>
+</ul>
+<h4 id="2-gs-stack-protection">2. GS stack protection</h4>
+<ul>
+<li><strong>编译器针对函数调用和返回时添加保护和检查功能的代码，在函数被调用时，在缓冲区和函数返回地址增加一个 32 位随机数 security_cookie</strong></li>
+<li>随即存放，随机产生当进程启动的时候</li>
+<li>发生栈缓冲区攻击时，对返回地址或其他指针进行覆盖的同时，会覆盖 security_cookie，因此在函数调用结束返回时，对它检查发现变化而来，就会发现缓冲区溢出的操作</li>
+</ul>
+<h4 id="3-dep">3 DEP</h4>
+<blockquote>
+<p><strong>数据执行保护技术可以限制内存堆栈区的代码为不可执行状态，从而防范溢出后代码的执行</strong></p>
+</blockquote>
+<ul>
+<li>分为软件 dep 和硬件 dep，硬件需要 cpu 的支持，在页表增加一个保护位 nx（no execute）</li>
+<li>编译器提供了一个链接标志/nxcompat</li>
+</ul>
+<h4 id="4-safeseh">4 safeseh</h4>
+<ul>
+<li>编译器选项/safeseh，采用该选项编译的程序将 pe 文件中所有合法的 seh 异常处理函数的地址解析出来制成一张 seh 表，放在 pe 文件的数据块中，用于异常处理时进行匹配检查。在该 pe 文件被加载时，将加密后的 seh 函数表地址等信息，放入 ntdll.dll 的 sehindex 结构中</li>
+<li><strong>在 Pe 文件运行时</strong>，<strong>针对程序的每个异常处理函数检查是否在合法的 seh 函数表中</strong>，<strong>接着要检查异常处理句柄是否在栈上</strong>，两个检测可以防止在堆上伪造异常链和把 shellcode 防止在栈上的情况</li>
+</ul>
+<h4 id="5-sehop">5 sehop</h4>
+<ul>
+<li><strong>核心：检测程序栈中所有 seh 结构链表的完整性</strong></li>
+<li><strong>seh 结构中异常处理函数的句柄（handle）即处理函数地址必须不在栈上</strong></li>
+</ul>
+<h3 id="3_1">地址定位技术（3 种）</h3>
+<h4 id="1-shellcode">1. 静态 shellcode 地址的利用技术</h4>
+<ul>
+<li>直接将 shellcode 代码在栈帧中的静态地址覆盖原有返回地址</li>
+<li><img alt="alt text" src="image-3.png" /></li>
+</ul>
+<h4 id="2_3">2. 基于跳板指令的地址定位技术</h4>
+<ul>
+<li>原因：一些软件漏洞存在某些动态链接库中，在进程运行时被<strong>动态加载</strong>，因而在下一次被重新装载到内存时，其<strong>在内存中的栈帧地址是动态变化的</strong>。则插入的 shellcode 也时变化的，<strong>此外，若使用 aslr，地址会因引入随机数每次发生变化</strong></li>
+<li>使用<strong>esp 寄存器</strong>，在函数调用结束后，被调用函数的栈帧被释放，esp 寄存器中的栈顶指针指向返回地址在内存高地址方向的相邻位置</li>
+<li>对 shellcode 的动态定位：</li>
+<li>
+<ol>
+<li><strong>找到内存中任意一个汇编指令 jmp esp</strong>,这条指令执行后可跳转到 esp 寄存器保存的地址，下面准备在溢出后<strong>将这条指令的地址覆盖返回地址</strong></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>设计好<strong>输入数据</strong>，使缓冲区溢出后，前面的填充内容为任意数据，紧接着<strong>覆盖返回地址的使 jmp esp 指令的地址</strong>，再接着覆盖<strong>与返回地址相邻的高地址位置</strong>并写入 shellcode 代码。</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>函数调用完成函数返回，根据返回地址中指向的 jmp esp 指令的地址去执行 jmp esp 操作，shellcode 代码被执行</li>
+</ol>
+</li>
+<li><img alt="alt text" src="image-4.png" /></li>
+<li>
+<ul>
+<li><strong>使用 jmp esp 指令作为跳板</strong></li>
+</ul>
+</li>
+<li>
+<p>也可以使用<code>mov eax,esp;jmp eax</code>进入栈区</p>
+</li>
+</ul>
+<h4 id="3_2">3. 内存喷洒技术</h4>
+<ul>
+<li><strong>代表是堆喷洒。heap spray</strong>,在 shellcode 的前面加上大量的滑板指令（slide code）,组成一个非常长的注入代码段。然后向系统申请大量空间，并反复用这个注入代码段来填充。攻击者再结合漏洞利用技术，只要使程序跳转到堆中被填充了注入代码的任何一个地址，程序指令就会顺着滑板指令最终执行到 shellcode 代码</li>
+</ul>
+<h3 id="api"><strong>api 函数自搜索技术</strong></h3>
+<p>步骤 定位</p>
+<h4 id="_48">引入</h4>
+<ul>
+<li>前面的 shellcode<strong>硬编址的方式来调用相应 api 函数</strong>。编写通用 shellcode,shellcode 自身就必须具备动态的自动搜索 api 函数地址的能力</li>
+</ul>
+<h4 id="messageboxa">通用编写逻辑（以 messageboxa 函数调用为例）</h4>
+<p>kernel32.dll-&gt;loadlibraryA-&gt;user32.dll-&gt;MessageBoxA</p>
+<ol>
+<li><strong>定位 kernel32.dll</strong></li>
+<li><strong>定位导出表及函数列表</strong></li>
+<li><strong>遍历函数列表，定位函数</strong></li>
+</ol>
+<h3 id="return-oriented-programming"><strong>返回导向编程 return-oriented programming</strong></h3>
+<p>原理 示例
+eax 的值</p>
+<p>指令写道 eax 中
+pop eax</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>_ 是一种新型的<strong>基于代码复用技术</strong>的攻击，<strong>它从已有的库或可执行文件中提取指令片段，构建恶意代码</strong>
+_ 基本思想：借助已存在的<strong>代码块</strong>，这些配件<strong>来自程序已加载的模块；</strong>在已加载模块中找到一些<strong>以 retn 结尾的配件</strong>，把这些配件的地址布置在堆栈上，当控制 eip 并返回时，程序就会跳去执行这些小配件，这些小<strong>配件是在别的模块代码段</strong>，不受 dep 的影响</p>
+<div class="admonition note 三点总结">
+<p class="admonition-title">Note</p>
+<div class="language-text highlight"><pre><span></span><code>1. rop通过rop链retn实现有序汇编指令的执行
+2. rop链由一个个rop小配件组成，gadets,相当于一个小节点
+3. rop小配件由“目的执行指令+rern指令组成”
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<p><code>???????=&gt;</code>表示当前返回地址里包含的指令及跳转到该指令处执行</p>
+<ul>
+<li>基于该漏洞的利用：</li>
+<li><strong>调用相关 api 关闭或绕过 dep 保护</strong></li>
+<li><strong>实现地址跳转</strong>，直接转向不受 dep 保护的区域里保存的 shellcode 执行</li>
+<li><strong>调用相关 api 将 shellcode 写入不受 dep 保护的可执行内存</strong>，进而配合基于 rop 编写的地址跳转指令，完成漏洞利用
+     <img alt="alt text" src="image-7.png" /></li>
+</ul>
+<h3 id="_49">绕过其他安全防护</h3>
+<h4 id="aslr">aslr 缺陷和绕过方法</h4>
+<ul>
+<li>增加随机偏移使得攻击变得困难</li>
+<li>但是，该技术存在很多脆弱性</li>
+</ul>
+<h4 id="seh_1">seh 保护机制缺陷和绕过方法</h4>
+<ul>
+<li><strong>当一个进程中存在一个不是/safeseh 编译的 dll 或者库文件时，整个 safeseh 机制就可能失效</strong></li>
+<li>可行的方法：</li>
+<li><strong>利用未开启 safeseh 模块作为跳板绕过</strong></li>
+<li><strong>利用加载模块之外的地址进行绕过</strong></li>
+</ul>
+<h2 id="_50">漏洞挖掘基础</h2>
+<h3 id="_51">方法概述</h3>
+<h4 id="_52">分类</h4>
+<ul>
+<li>静态分析技术：词法分析、数据流分析、控制流分析、模型检测、定理证明、符号执行、污点传播分析等</li>
+<li><strong>不需要运行程序、分析效率高、资源消耗低</strong></li>
+<li>动态分析技术：模糊测试、动态污点分析、动态符号执行</li>
+<li><strong>需要运行程序，准确率非常高、误报率很低</strong></li>
+<li>符号执行和污点分析分别都支持动静态</li>
+</ul>
+<h4 id="_53">符号执行</h4>
+<ul>
+<li>
+<p>基本思路：使用符号值替代具体值，模拟程序的执行。</p>
+</li>
+<li>
+<p>三个关键点：<strong>变量符号化、程序执行模拟、约束求解</strong></p>
+</li>
+<li>程序执行模拟：<strong>运算语句</strong>和<strong>分支语句</strong>的模拟：对于运算语句：使用符号表达式的方法表示变量的值；分支语句：<strong>收集到所有执行路径的约束条件表达式</strong></li>
+<li>约束求解主要负责<em>路径可达性判定及测试输入生成</em>的工作</li>
+<li>优点：代价小 效率高</li>
+<li>缺点：程序执行的可能路径随着程序规模的增大呈指数级增长</li>
+</ul>
+<h4 id="_54">污点分析</h4>
+<ul>
+<li>分为污点传播分析（静态）和动态污点分析；</li>
+</ul>
+<h5 id="_55">基本思想：</h5>
+<ul>
+<li><strong>首先，确定污点源</strong>，表示外部数据或用户所关心的内部数据，是需要进行标注分析的输入数据</li>
+<li><strong>然后，标记和分析污点</strong></li>
+<li><strong>控制流劫持</strong>：程序的执行流程将被外部数据任意控制</li>
+</ul>
+<h5 id="_56">核心要素:</h5>
+<ul>
+<li><strong>污点源</strong></li>
+<li><strong>传播规则</strong>：<strong>污点扩散规则和清除规则</strong>，是污点分析的计算依据</li>
+<li><strong>污点检测</strong>：在程序执行过程中的<strong>敏感位置（sink 点）</strong>进行<strong>污点判定</strong>，<strong>敏感位置主要包括程序跳转以及系统函数调用</strong></li>
+</ul>
+<h5 id="_57">优缺点：</h5>
+<ul>
+<li>污点分析的核心是分析输入参数和执行路径之间的关系，<strong>它适用于由输入参数引发漏洞的检测</strong>，比如 sql 注入漏洞等</li>
+<li>具有<strong>较高的分析准确率</strong>，然而，针对大规模代码的分析，由于<strong>路径数量较多</strong>，其分析的性能会受到较大的影响</li>
+</ul>
+<h3 id="_58">词法分析</h3>
+<h4 id="1_3">1 基本概念</h4>
+<ul>
+<li>通过对代码<strong>基于文本或字符标识的匹配分析对比</strong>，以查找<strong>符合特定特征和词法规则的危险函数、api 或简单语句组合</strong></li>
+<li><strong>主要思想</strong>：将代码文本与归纳好的缺陷模式比如边界条件检查进行匹配，以此发现漏洞</li>
+<li><strong>优点：</strong>：算法<strong>简单</strong>，检测<strong>性能较高</strong></li>
+<li><strong>缺点：</strong>：只能<strong>进行表面的词法检测</strong>，会出现<strong>较高的漏报和误报</strong></li>
+</ul>
+<h3 id="_59">数据流分析</h3>
+<h4 id="1_4">1 基本概念</h4>
+<ul>
+<li>是一种用来获取相关数据沿着数据执行路径流动的信息分析技术，分析对象是程序执行路径上的数据流动或可能的取值。</li>
+<li>根据分析程序路径的深度，将数据流分析分为<strong>过程内分析</strong>和<strong>过程间分析</strong></li>
+</ul>
+<h4 id="2_4">2 方法分类</h4>
+<ul>
+<li><strong>过程内分析只针对程序中函数内的代码进行分析</strong>，又分为：</li>
+<li>流不敏感分析:flow insensitive,按照代码行号从上而下进行分析</li>
+<li>流敏感分析：flow sensitive,首先是产生程序控制流图，control flow graph,cfg,再按照 cfg 的拓扑排序正向或逆向分析；</li>
+<li>路径敏感分析：path sensitive,不仅考虑到语句先后顺序，还会考虑语句可达性，即会沿着实际可执行到路径进行分析</li>
+<li><strong>过程间分析则考虑函数之间的数据流，即需要跟踪分析目标数据在函数之间的传递过程</strong></li>
+<li>上下文不敏感分析：忽略调用位置和函数参数取值等函数调用的相关信息</li>
+<li>上下文敏感分析：对不同调用位置调用的统一函数加以区分</li>
+</ul>
+<h4 id="3_3">3 程序代码模型</h4>
+<ul>
+<li>数据流分析使用的程序代码模型主要包括<strong>程序代码的中间表示</strong>以及一些<strong>关键的数据结构</strong>，利用程序代码的中间表示可以对程序语句的指令语义进行分析</li>
+<li><strong>抽象语法树</strong>：是程序抽象结构的树状表现形式</li>
+<li><strong>三地址码</strong>：three address code.<strong>每个指令具有不多于三个的运算分量，每个运算分量都像是一个寄存器</strong></li>
+<li><strong>控制流图（cfg）</strong>:<strong>用于描述程序过程内的控制流的有向图</strong>，节点和有向边</li>
+<li><strong>调用图：call graph</strong>:描述程序中过程之间的调用和被调用关系的有向图</li>
+</ul>
+<h4 id="_60">基于数据流的漏洞分析流程</h4>
+<ul>
+<li>首先：进行<strong>代码建模</strong>，将代码构造成抽象语法树或程序控制流图</li>
+<li>然后：<strong>追踪获取变量的变化信息，</strong>，根据<strong>漏洞分析规则</strong>检测安全缺陷和漏洞</li>
+<li>基于数据流的漏洞分析非常适合检查因控制流信息非法操作而导致的安全问题，如内存访问越界，常数传播</li>
+</ul>
+<div class="admonition example 检测指针变量的错误使用">
+<p class="admonition-title">Example</p>
+</div>
+<p>在检测指针变量的错误使用时，我们关心的是变量的状态，左侧代码可能出现 use after free 漏洞。
+<img alt="alt text" src="image-6.png" /></p>
+<p>!!! example 检测缓冲区溢出 * 我们<strong>关心的是变量的取值</strong>，并在一些预定义的敏感操作所在的程序点上，<strong>对变量的取值进行检查</strong></p>
+<p><img alt="alt text" src="image-5.png" />
+而是取值变化？</p>
+<h3 id="_61">模糊测试</h3>
+<p>概念
+步骤</p>
+<h4 id="_62">概念</h4>
+<ul>
+<li>是一种自动化或半自动化的安全漏洞检测技术，通过向目标软件输入大量的<strong>畸形数据</strong>并监测目标系统的异常来发现潜在的软件漏洞</li>
+<li>属于<strong>黑盒测试</strong>的一种</li>
+<li><strong>缺点是畸形数据的生成具有随机性，</strong>而随机性造成代码覆盖不充分导致了<strong>测试数据覆盖率不高</strong></li>
+</ul>
+<h4 id="_63">分类</h4>
+<ul>
+<li>基于生成：<strong>依据特定的文件格式或者协议规范组合生成测试用例</strong></li>
+<li>基于变异：<strong>在原有合法的测试用例基础上，通过变异策略生成新的测试用例</strong></li>
+</ul>
+<h4 id="_64">模糊测试步骤</h4>
+<ol>
+<li>确定测试对象和输入数据</li>
+<li>生成模糊测试数据</li>
+<li>检测模糊测试数据</li>
+<li>监测程序异常</li>
+<li>
+<p>确定可用性（非必须）</p>
+</li>
+<li>
+<p>模糊测试不能发现被测软件所有错误原因：<strong>随机性</strong>的测试样本生成方式</p>
+</li>
+</ol>
+<h4 id="_65">智能模糊测试</h4>
+<ul>
+<li><strong>引入了基于符号执行、污点传播分析等可进行程序理解的方法，在实现程序理解的基础上，有针对性的设计测试数据的生成</strong>结合了程序理解和模糊测试的方法</li>
+<li>步骤：</li>
+<li>
+<ol>
+<li><strong>反汇编</strong>可执行代码，智能模糊测试的前提是对可执行代码进行输入数据控制流执行路径之间相关关系的分析</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>将汇编语言<strong>中间语言转换</strong></li>
+</ol>
+</li>
+<li>
+<ol>
+<li><strong>采用智能技术分析输入数据和执行路径的关系</strong>，符号执行和约束求解技术、污点传播分析、执行路径遍历等技术手段，<strong>检测出可能产生漏洞的程序执行路径集合和输入数据集合</strong></li>
+</ol>
+</li>
+<li>
+<ol>
+<li><strong>利用分析获得的输入数据集合，对执行路径集合进行测试</strong></li>
+</ol>
+</li>
+<li>核心思想：<strong>以尽可能小的代价找出程序中最可能产生漏洞的执行路径集合</strong>。从而避免盲目全路径覆盖，使其具有针对性。<strong>由模糊化测试向精确化测试</strong>转变</li>
+</ul>
+<h3 id="afl">AFL 模糊测试框架</h3>
+<h4 id="_66">概念</h4>
+<ul>
+<li>一款<strong>基于覆盖引导的模糊测试工具</strong>，<strong>通过记录输入样本的代码覆盖率，从而调整输入样本以提高覆盖率，增加发现漏洞的概率</strong></li>
+<li><strong>主要用于 c/c++程序的测试，</strong>，被测程序<strong>有无程序源码均可</strong>，有源码可以进行编译时插桩，无源码可以借助 qemu 的 user-mode 模式进行二进制插桩</li>
+</ul>
+<h4 id="_67">工作流程</h4>
+<ol>
+<li>从源码编译程序时进行<strong>插桩</strong>，<strong>以记录代码覆盖率</strong></li>
+<li>选择一些输入文件作为初始测试集加入输入队列；</li>
+<li><strong>将队列中的文件按策略进行突变</strong></li>
+<li>如果经过编译文件更新了覆盖范围，则保留在队列中；</li>
+<li>
+<p>循环进行时，期间<strong>触发了 crash 的文件</strong>会被记录下来
+   <code>afl-fuzz -i in -o out -- ./test @@</code></p>
+</li>
+<li>
+<p><code>afl-fuzz</code>: 这是 AFL 工具的主要可执行文件，用于进行模糊测试。</p>
+</li>
+<li>
+<p><code>-i in</code>: 指定输入种子目录（input directory）。<code>in</code>是包含初始测试用例（种子文件）的目录。AFL 会基于这些种子文件进行变异生成新的测试用例。</p>
+</li>
+<li>
+<p><code>-o out</code>: 指定输出目录（output directory）。<code>out</code>目录将存储模糊测试的结果，包括导致崩溃的测试用例、代码覆盖率信息等。</p>
+</li>
+<li>
+<p><code>--</code>: 这是一个分隔符，表示选项的结束，后面的部分是被测试程序的命令。</p>
+</li>
+<li>
+<p><code>./test @@</code>: 这是被测试的目标程序。<code>./test</code>是要运行的程序（在当前目录下的名为<code>test</code>的可执行文件）。<code>@@</code>是一个占位符，AFL 在运行时会将其替换为实际输入文件的路径。
+  使用 AFL 对当前目录下的<code>test</code>程序进行模糊测试，初始种子文件位于<code>in</code>目录中，输出结果保存到<code>out</code>目录中。运行测试时，AFL 会将生成的测试文件作为参数传递给<code>test</code>程序（替换<code>@@</code>）。</p>
+</li>
+</ol>
+<h2 id="_68">漏洞挖掘技术进阶</h2>
+<h3 id="_69">程序切片技术</h3>
+<h4 id="_70">定义</h4>
+<ul>
+<li><strong>旨在从程序中提取满足一定约束条件的代码片段</strong>，对指定变量施加影响的代码指令，或者指定变量所影响的代码片段</li>
+<li><strong>可以从大规模程序中精确定位分析员所关心的代码片段</strong></li>
+<li><strong>Mark Weise，</strong>,一个程序切片由程序中的一些语句和判定表达式组成的集合。</li>
+<li>分类：<strong>前向加后向。前向切片的计算方向和程序运行方向是一致的</strong></li>
+</ul>
+<h4 id="_71">控制流图</h4>
+<blockquote>
+<p>cfg,<strong>是一个过程或程序的抽象表现，代表了一个程序执行过程中会便利到的所有路径</strong>
+控制流图：四元组，v,e,s,e 变量的集合，边的集合，控制流图的入口和出口</p>
+</blockquote>
+<ul>
+<li>
+<p>程序中的每一条指令都映射为该图上的一个节点，具有控制依赖关系的点之间用一条边连接</p>
+</li>
+<li>
+<p>控制依赖的来源：程序上下文，控制指令</p>
+</li>
+</ul>
+<h4 id="_72">程序依赖图</h4>
+<ul>
+<li>五元组：v,dde,cde,s,e;dde 表示数据依赖边的集合，cde 表示控制依赖边的集合。</li>
+<li><strong>控制依赖：流程上存在的依赖</strong></li>
+<li><strong>数据依赖：定义-引用</strong></li>
+</ul>
+<h4 id="_73">系统依赖图</h4>
+<ul>
+<li>七元组：sdg(v,dde,cde,ce,tde,s,e):ce 表示函数调用边，<strong>tde 表示参数传递造成的传递依赖边的集合</strong></li>
+</ul>
+<h3 id="_74">程序切片方法</h3>
+<h4 id="_75">工作原理</h4>
+<ul>
+<li><strong>在实际程序调试过程中，通常程序员只关注程序的部分行为</strong></li>
+<li>
+<p><strong>切片语句可以利用数据依赖和控制依赖分析方法来获取</strong></p>
+</li>
+<li>
+<p><strong>分为 3 个步骤</strong></p>
+</li>
+<li><strong>程序依赖关系提取</strong></li>
+<li><strong>切片规则制定</strong>：静态，动态，条件或者前向 后向</li>
+<li><strong>切片生成</strong>，数据流方程，图可达算法</li>
+</ul>
+<h4 id="_76">图可达算法</h4>
+<ul>
+<li><strong>程序依赖图，具有直接依赖关系和间接依赖关系的结点都用一条边连接</strong></li>
+<li>pdgslice 详细步骤如下</li>
+<li>输入：节点 node</li>
+<li>输出：节点集 visitednodes</li>
+<li>step1:判断 node 是否在节点集合里，若是，返回；否，进入步骤 2</li>
+<li>step2:将 node 添加到 visitednodes 中</li>
+<li>step3:在程序依赖图中便利 node 依赖的节点，得到节点集 pred;</li>
+<li>step4:对于每一个 pred 属于 Pred,迭代调用 PDGSlice(pred)</li>
+</ul>
+<h4 id="_77">动态切片</h4>
+<ul>
+<li><strong>考虑特定程序的特定输入</strong></li>
+<li><strong>静态切片和动态切片可以看作条件切片的两个特例</strong></li>
+</ul>
+<h3 id="_78">程序插桩技术</h3>
+<p>概念 作用</p>
+<h4 id="_79">概念</h4>
+<ul>
+<li><strong>在代码中插入一段我们自己定义的代码</strong></li>
+<li><strong>插入输入输出语句；断言是一种特殊的插桩</strong></li>
+</ul>
+<h4 id="_80">插桩分类</h4>
+<ul>
+<li><strong>源代码插桩</strong></li>
+<li><strong>静态二进制插桩，编译之后，运行之前</strong></li>
+<li><strong>动态二进制插桩，在程序运行时</strong></li>
+</ul>
+<h4 id="pin">pin 插桩示例</h4>
+<ul>
+<li><strong>pin 是 intel 公司开发的动态二进制插桩框架，支持 ia-32 和 x86-64 指令集架构，支持 win 和 linux</strong></li>
+<li><strong>pintool.pin 通过已经定义的 tools 或自己开发的 tool 来完成对目标程序的插桩</strong></li>
+</ul>
+<h5 id="pintool">使用 pintool</h5>
+<ol>
+<li>编译现有 pintool</li>
+<li>
+<p>Inscount 插桩示例，首先编译产生动态链接库</p>
+</li>
+<li>
+<p>插桩模式：</p>
+</li>
+<li>指令集，轨迹，镜像，函数；各种粒度</li>
+</ol>
+<h3 id="hook">消息 hook 技术</h3>
+<h4 id="hook_1">hook 概念</h4>
+<ul>
+<li>hook,钩子，是一种过滤或叫挂钩消息的技术；</li>
+<li>它的目的是过滤一些关键函数调用，在执行函数前先执行自己的挂钩函数，达到监控函数调用，改变函数功能的目的</li>
+</ul>
+<h4 id="hook_2">消息 hook</h4>
+<ul>
+<li><strong>win 系统建立在事件驱动机制上，整个系统通过消息传递实现的。消息 hook 就是一个 win 消息的拦截机制</strong></li>
+<li>如果对同一事件即安装了线程钩子又安装了系统钩子，先线程在系统</li>
+</ul>
+<h5 id="hook-dll">基于消息 hook 的 dll 注入</h5>
+<ul>
+<li>编制键盘消息的 hook 函数；通过 setwindowshookex 创建键盘消息钩子实现 dll 注入</li>
+</ul>
+<h3 id="api-hook">api hook 技术</h3>
+<h4 id="_81">概念</h4>
+<ul>
+<li>多种方法：iat hook,代码 hook,eat hook</li>
+<li><strong>iat hook:将输入函数地址表 iat 内部的 api 地址更改为 hook 函数地址</strong></li>
+<li><strong>代码 hook:系统库（*.dll）映射到进程内存，从中朝朝 api 的实际地质并直接修改代码</strong></li>
+</ul>
+<h3 id="_82">符号执行基本原理</h3>
+<h3 id="z3">Z3 约束求解器</h3>
+<h3 id="angr">Angr 应用示例</h3>
+<h3 id="_83">污点分析基本原理</h3>
+<h3 id="_84">污点分析方法</h3>
+<h2 id="web_1">web 进阶</h2>
+<p><img alt="alt text" src="image-8.png" />
+输入输出流而非文件</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
