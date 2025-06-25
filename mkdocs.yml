@@ -92,6 +92,7 @@ nav:
 
       - 计算机系统:
           - cs/计算机系统/计算机系统概论.md
+          - cs/计算机系统/计组review.md
       - 工具:
           - cs/tools/git.md
           - the missing semester:
