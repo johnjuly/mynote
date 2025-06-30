@@ -45,10 +45,12 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
 extra_css:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
   - css/custom.css
   - css/card.css
   - css/tasklist.css
