@@ -2,7 +2,7 @@
 
 
 <div class="card file-block" markdown="1">
-<div class="file-icon"><img src="/assets/images/PDF.svg" style="height: 3em;"></div>
+<div class="file-icon"><img src="/assets/PDF.svg" style="height: 3em;"></div>
 <div class="file-body">
 <div class="file-title">感知技术与应用 </div>
 <div class="file-meta"></div>
