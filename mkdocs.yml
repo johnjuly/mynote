@@ -28,7 +28,9 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - navigation.top
-  font: false
+  font:
+    text: Noto Serif SC # Roboto
+    code: Roboto Mono
   palette:
     # Palette toggle for light mode
     - scheme: default
