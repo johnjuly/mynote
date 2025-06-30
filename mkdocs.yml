@@ -76,7 +76,7 @@ nav:
       - 网络: cs/net.md
       - 数据结构与算法: cs/language/c++/dsa.md
       - 嵌入式系统:
-          - cs/embeded systen/embeded.0.md
+          - cs/embeded systen/embedded.0.md
           - cs/embeded systen/embeded.md
       - 软件安全:
           - cs/软件安全/review.md
@@ -84,6 +84,7 @@ nav:
       - 人工智能:
           - cs/人工智能/search .md
           - cs/人工智能/cs188 probability.md
+          - cs/人工智能/review.md
 
       - 数据库系统:
           - cs/db/1.md
@@ -96,8 +97,8 @@ nav:
       - 工具:
           - cs/tools/git.md
           - the missing semester:
-              - shell.md
-              - cs/tools/the missing semester/shell tools and scripts.md
+              - cs/tools/the missing semaster/shell.md
+              - cs/tools/the missing semaster/shell tools and scripts.md
       - c++学习:
           - hj:
               - cs/language/c++/hj/c++ 1.md
